@@ -239,4 +239,12 @@
     }
     .wave-bottom svg { height: 20px; }
     .body-section { padding: 48px 20px 80px 20px; }
+    
+    /* Forces the footer to stack gracefully on mobile */
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 40px; /* Adds breathing room between contact and social */
+    }
 }
