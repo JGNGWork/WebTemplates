@@ -3,7 +3,7 @@
     --theme-color: #38bdf8; /* Nice Tech Blue default */
     --body-bg: #ffffff;
     --footer-bg: #1e293b;
-    --header-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1600');
+    --header-image: url('https://images.unsplash.com/photo-1761906270046-85545d6011ff?w=1600');
 }
 
 /* Base Reset for scaling and clean formatting */
@@ -268,3 +268,4 @@
         gap: 40px;              /* Adds nice breathing room between Contact Info and Social Links */
     }
 }
+
