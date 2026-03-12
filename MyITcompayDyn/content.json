@@ -45,7 +45,7 @@
     ],
     
     
-    "_commentContact": "--- THIS IS THE Contect CONTENT SECTION ---",
+    "_commentContact": "--- THIS IS THE Contact CONTENT SECTION ---",
     "contact": {
         "email": "contact@myitcompany.com",
         "phone": "+44 20 7946 0958",
@@ -57,4 +57,5 @@
         }
     }
 }
+
 
