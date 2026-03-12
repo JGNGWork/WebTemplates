@@ -1,0 +1,134 @@
+/* Base Reset for scaling and clean formatting */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* TOP SECTION (Hero) */
+.top-section {
+    position: relative;
+    height: 32vh; /* Takes up 32% of the screen height */
+    /* Using an Unsplash placeholder image of a server room/code */
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1600') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.top-section h1 {
+    color: #ffffff;
+    font-size: 4rem;
+    text-align: center;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    padding: 0 20px 32px 20px;
+}
+
+/* Wave Dividers */
+.wave-bottom {
+    position: absolute;
+    bottom: -1px; /* Prevents tiny gaps */
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.wave-bottom svg {
+    display: block;
+    width: 100%;
+    height: 60px; /* Adjust height of the curve */
+}
+
+/* BODY SECTION */
+.body-section {
+    position: relative;
+    background-color: #ffffff; /* Requested RGB Hex */
+    padding: 48px 20px 120px 20px; /* Extra bottom padding for the next wave */
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Accordion Styles */
+.accordion-item {
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+    overflow: hidden;
+}
+
+.accordion-header {
+    width: 100%;
+    background-color: #f8fafc;
+    color: #0f172a;
+    padding: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover, .accordion-header.active {
+    background-color: #e2e8f0;
+}
+
+.accordion-content {
+    background-color: #ffffff;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+}
+
+.accordion-content ul {
+    list-style-type: none;
+    padding: 20px;
+}
+
+.accordion-content li {
+    padding: 10px 0;
+    border-bottom: 1px solid #e2e8f0;
+    color: #475569;
+}
+
+.accordion-content li:last-child {
+    border-bottom: none;
+}
+
+/* BOTTOM SECTION */
+.bottom-section {
+    background-color: #1e293b; /* Dark slate */
+    color: #f8fafc;
+    padding: 28px 20px 26px 20px;
+    text-align: center;
+}
+
+.contact-details h2 {
+    margin-bottom: 20px;
+    color: #38bdf8; /* Nice tech blue */
+}
+
+.contact-details p {
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    .top-section { height: 18vh; }
+    .top-section h1 { 
+        font-size: 2.5rem; 
+        padding: 20px 20px 12px 20px;
+    }
+    .wave-bottom svg { height: 20px; }
+    .body-section { padding: 48px 20px 80px 20px; }
+}
