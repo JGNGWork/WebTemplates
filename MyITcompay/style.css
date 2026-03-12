@@ -10,8 +10,10 @@
 .top-section {
     position: relative;
     height: 32vh; /* Takes up 32% of the screen height */
-    /* Using an Unsplash placeholder image of a server room/code */
+    /* Using an Unsplash placeholder image of a server room/code * /
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1600') center/cover no-repeat;
+    */
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1761906270046-85545d6011ff?w=1600') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -131,4 +133,5 @@
     }
     .wave-bottom svg { height: 20px; }
     .body-section { padding: 48px 20px 80px 20px; }
+
 }
