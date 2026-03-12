@@ -99,6 +99,30 @@
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
             background-color: #ffffff;
         }
+        
+        /* --- MOBILE RESPONSIVENESS --- */
+        @media (max-width: 768px) {
+            .control-bar {
+                flex-direction: column;
+                padding: 15px;
+                gap: 15px;
+            }
+
+            .controls {
+                flex-direction: column;
+                width: 100%;
+                gap: 10px;
+            }
+
+            select, button {
+                width: 100%;
+                min-width: 0; /* Overrides the 250px min-width so it fits on tiny screens */
+            }
+
+            .preview-container {
+                padding: 10px; /* Reduces the grey border on mobile to give the site more room */
+            }
+        }
     </style>
 </head>
 <body>
