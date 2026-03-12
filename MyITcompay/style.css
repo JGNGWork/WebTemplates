@@ -83,6 +83,18 @@
     filter: drop-shadow(0px -8px 8px rgba(0, 0, 0, 0.6));
 }
 
+/* Define the animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        /* transform: translateY(40px); / * Starts 40 pixels lower */
+    }
+    100% {
+        opacity: 1;
+        /* transform: translateY(0); / * Ends at its normal position */
+    }
+}
+
 /* BODY SECTION */
 .body-section {
     position: relative;
@@ -146,55 +158,62 @@
     border-bottom: none;
 }
 
+
+
 /* BOTTOM SECTION */
 .bottom-section {
     background-color: #1e293b; /* Dark slate */
     color: #f8fafc;
     padding: 28px 20px 26px 20px;
-    text-align: center;
 }
 
-.contact-details h2 {
+/* Two-column layout using Flexbox */
+.footer-container {
+    display: flex;
+    justify-content: space-between; /* Pushes Contact left, Social right */
+    align-items: flex-start;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.footer-container h2 {
     margin-bottom: 20px;
     color: #38bdf8; /* Nice tech blue */
 }
 
-.contact-details p {
+.contact-info p {
     margin: 10px 0;
     font-size: 1.1rem;
 }
 
-/* Define the animation */
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        /* transform: translateY(40px); / * Starts 40 pixels lower */
-    }
-    100% {
-        opacity: 1;
-        /* transform: translateY(0); / * Ends at its normal position */
-    }
-}
 
 /* Social Links Layout */
 .social-links {
     margin-top: 30px;
     display: flex;
-    justify-content: center;
     gap: 15px; /* Adds perfect spacing between the buttons */
     flex-wrap: wrap; /* Ensures they stack neatly on very small phone screens */
 }
 
 /* Social Link Button Styling */
 .social-links a {
-    color: #f8fafc;
-    text-decoration: none;
-    padding: 10px 24px;
-    border: 1px solid #38bdf8; /* Tech Blue border */
-    border-radius: 25px; /* Creates modern, pill-shaped buttons */
-    font-weight: bold;
-    font-size: 0.95rem;
-    transition: all 0.3s ease; /* Makes the hover effect perfectly smooth */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    border: 2px solid #38bdf8;
+    border-radius: 50%; /* Makes them perfect circles */
+    color: #f8fafc; /* Icon color */
+    transition: all 0.3s ease;
+}
+
+/* Ensuring the SVGs fit perfectly inside the circles */
+.social-links a svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor; /* Matches the color of the text/link */
 }
 
 /* Hover Effect for Social Links */
