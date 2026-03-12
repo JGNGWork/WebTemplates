@@ -13,7 +13,7 @@
     /* Using an Unsplash placeholder image of a server room/code * /
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1600') center/cover no-repeat;
     */
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://images.unsplash.com/photo-1761906270046-85545d6011ff?w=1600') center/cover no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05)), url('https://images.unsplash.com/photo-1761906270046-85545d6011ff?w=1600') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -28,7 +28,14 @@
     /* Layered text shadows for maximum readability */
     text-shadow: 
         2px 2px 4px rgba(0, 0, 0, 0.9),  /* Close, dark drop shadow */
-        0px 0px 15px rgba(0, 0, 0, 0.6); /* Wider, softer dark glow */
+        0px 0px 15px rgba(0, 0, 0, 0.6), /* Wider, softer dark glow */
+        -1px -1px 0 #000000,  
+         1px -1px 0 #000000,
+        -1px  1px 0 #000000,
+         1px  1px 0 #000000,
+        2px 2px 8px rgba(0, 0, 0, 0.9), 
+        2px 2px 15px rgba(0, 0, 0, 0.8),
+        2px 2px 25px rgba(0, 0, 0, 0.6);
     
     /* The new animation properties */
     animation: fadeInUp 1.2s ease-out forwards;
