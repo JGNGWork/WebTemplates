@@ -210,6 +210,7 @@
 .social-links {
     margin-top: 30px;
     display: flex;
+    align-items: center;
     gap: 15px; /* Adds perfect spacing between the buttons */
     flex-wrap: wrap; /* Ensures they stack neatly on very small phone screens */
 }
