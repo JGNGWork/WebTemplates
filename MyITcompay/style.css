@@ -13,7 +13,7 @@
     /* Using an Unsplash placeholder image of a server room/code * /
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1600') center/cover no-repeat;
     */
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1761906270046-85545d6011ff?w=1600') center/cover no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://images.unsplash.com/photo-1761906270046-85545d6011ff?w=1600') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -23,8 +23,15 @@
     color: #ffffff;
     font-size: 4rem;
     text-align: center;
-    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
     padding: 0 20px 32px 20px;
+    
+    /* Layered text shadows for maximum readability */
+    text-shadow: 
+        2px 2px 4px rgba(0, 0, 0, 0.9),  /* Close, dark drop shadow */
+        0px 0px 15px rgba(0, 0, 0, 0.6); /* Wider, softer dark glow */
+    
+    /* The new animation properties */
+    animation: fadeInUp 1.2s ease-out forwards;
 }
 
 /* Wave Dividers */
@@ -133,5 +140,16 @@
     }
     .wave-bottom svg { height: 20px; }
     .body-section { padding: 48px 20px 80px 20px; }
+}
 
+/* Define the animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        /* transform: translateY(40px); / * Starts 40 pixels lower */
+    }
+    100% {
+        opacity: 1;
+        /* transform: translateY(0); / * Ends at its normal position */
+    }
 }
