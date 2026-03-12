@@ -27,8 +27,6 @@
     font-size: 4rem;
     text-align: center;
     padding: 0 20px 32px 20px;
-    margin-top: 50%;
-    margin-bottom: 50%;
     
     /* Layered text shadows for maximum readability */
     text-shadow: 
@@ -166,17 +164,6 @@
     font-size: 1.1rem;
 }
 
-/* Mobile responsiveness */
-@media (max-width: 600px) {
-    .top-section { height: 18vh; }
-    .top-section h1 { 
-        font-size: 2.5rem; 
-        padding: 20px 20px 12px 20px;
-    }
-    .wave-bottom svg { height: 20px; }
-    .body-section { padding: 48px 20px 80px 20px; }
-}
-
 /* Define the animation */
 @keyframes fadeInUp {
     0% {
@@ -187,4 +174,21 @@
         opacity: 1;
         /* transform: translateY(0); / * Ends at its normal position */
     }
+}
+
+/***********************************************/
+/***********************************************/
+/***********************************************/
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    .top-section { height: 18vh; }
+    .top-section h1 { 
+        font-size: 2.8rem; 
+        padding: 20px 20px 12px 20px;
+        margin-top: 48%;
+        margin-bottom: 56%;
+    }
+    .wave-bottom svg { height: 20px; }
+    .body-section { padding: 48px 20px 80px 20px; }
 }
