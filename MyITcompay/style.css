@@ -26,8 +26,9 @@
     color: #ffffff;
     font-size: 4rem;
     text-align: center;
-    padding: 0 20px 0px 20px;
-    margin-bottom: 2%;
+    padding: 0 20px 32px 20px;
+    margin-top: 50%;
+    margin-bottom: 50%;
     
     /* Layered text shadows for maximum readability */
     text-shadow: 
