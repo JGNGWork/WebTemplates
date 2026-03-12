@@ -242,9 +242,9 @@
     
     /* Forces the footer to stack gracefully on mobile */
     .footer-container {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 40px; /* Adds breathing room between contact and social */
+        flex-direction: column; /* This forces the two columns to stack on top of each other! */
+        align-items: center;    /* Centers everything horizontally */
+        text-align: center;     /* Centers the text inside the blocks */
+        gap: 40px;              /* Adds nice breathing room between Contact Info and Social Links */
     }
 }
