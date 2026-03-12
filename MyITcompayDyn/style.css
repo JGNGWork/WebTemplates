@@ -1,6 +1,9 @@
 /* Define the global CSS variable with a fallback color */
 :root {
     --theme-color: #38bdf8; /* Nice Tech Blue default */
+    --body-bg: #ffffff;
+    --footer-bg: #1e293b;
+    --header-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1600');
 }
 
 /* Base Reset for scaling and clean formatting */
@@ -15,10 +18,9 @@
 .top-section {
     position: relative;
     height: 32vh; /* Takes up 32% of the screen height */
-    /* Using an Unsplash placeholder image of a server room/code * /
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1600') center/cover no-repeat;
-    */
-    background: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05)), url('https://images.unsplash.com/photo-1761906270046-85545d6011ff?w=1600') center/cover no-repeat;
+    /* Using an Unsplash placeholder image of a server room/code */
+    /* Using the new image variable */
+    background: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05)), var(--header-image) center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -59,6 +61,7 @@
     line-height: 0;
 }
 
+
 /* Top wave: Shadow pushes DOWN (positive 8px) onto the white body */
 .top-section .wave-bottom svg {
     display: block;
@@ -73,6 +76,11 @@
     /* Pushes the shadow straight down 4px, making the ribbon pop */
     filter: drop-shadow(0px 8px 8px rgba(0, 0, 0, 0.6));
 }
+
+.top-section .wave-mask {
+    fill: var(--body-bg);
+}
+
 
 /* Bottom wave: Shadow pushes UP (negative 8px) onto the white body */
 .body-section .wave-bottom svg {
@@ -90,6 +98,11 @@
     filter: drop-shadow(0px -8px 8px rgba(0, 0, 0, 0.6));
 }
 
+.body-section .wave-mask {
+    fill: var(--footer-bg);
+}
+
+
 /* Define the animation */
 @keyframes fadeInUp {
     0% {
@@ -105,7 +118,7 @@
 /* BODY SECTION */
 .body-section {
     position: relative;
-    background-color: #ffffff; /* Requested RGB Hex */
+    background-color: var(--body-bg); /* Using the variable */
     padding: 48px 20px 120px 20px; /* Extra bottom padding for the next wave */
 }
 
@@ -169,7 +182,7 @@
 
 /* BOTTOM SECTION */
 .bottom-section {
-    background-color: #1e293b; /* Dark slate */
+    background-color: var(--footer-bg); /* Using the variable */
     color: #f8fafc;
     padding: 28px 20px 26px 20px;
 }
