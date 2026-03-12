@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme Dashboard</title>
+    <style>
+        /* Base Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            background-color: #f1f5f9; /* Soft background to make the preview pop */
+            color: #0f172a;
+            overflow: hidden; /* Prevents double scrollbars */
+        }
+
+        /* --- TOP CONTROL BAR --- */
+        .control-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #ffffff;
+            padding: 15px 30px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            z-index: 10;
+        }
+
+        .branding {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #1e293b;
+        }
+
+        .controls {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        select {
+            padding: 10px 15px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 1rem;
+            color: #334155;
+            outline: none;
+            cursor: pointer;
+            transition: border-color 0.3s ease;
+            min-width: 250px;
+        }
+
+        select:focus {
+            border-color: #38bdf8;
+        }
+
+        button {
+            background-color: #38bdf8;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.1s ease;
+        }
+
+        button:hover {
+            background-color: #0284c7;
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
+        /* --- IFRAME PREVIEW CONTAINER --- */
+        .preview-container {
+            flex-grow: 1;
+            width: 100%;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        iframe {
+            width: 100%;
+            max-width: 1200px; /* Gives the preview a nice desktop width */
+            height: 100%;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="control-bar">
+        <div class="branding">Site Dashboard</div>
+        <div class="controls">
+            <select id="theme-selector">
+                <option value="content.json">Theme: My IT Company (Default)</option>
+                <option value="healthcare.json">Theme: Healthcare Clinic</option>
+                <option value="restaurant.json">Theme: Local Restaurant</option>
+            </select>
+            <button id="load-btn">Load Preview</button>
+        </div>
+    </div>
+
+    <div class="preview-container">
+        <iframe id="site-preview" src="index.html?theme=content.json" title="Website Preview"></iframe>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const loadBtn = document.getElementById('load-btn');
+            const themeSelector = document.getElementById('theme-selector');
+            const sitePreview = document.getElementById('site-preview');
+
+            // Function to update the iframe source
+            function updatePreview() {
+                const selectedTheme = themeSelector.value;
+                // Instead of redirecting the whole window, we just change the iframe's URL
+                sitePreview.src = `index.html?theme=${encodeURIComponent(selectedTheme)}`;
+            }
+
+            // Update iframe when button is clicked
+            loadBtn.addEventListener('click', updatePreview);
+
+            // Bonus: Auto-update the iframe when the dropdown selection changes
+            themeSelector.addEventListener('change', updatePreview);
+        });
+    </script>
+
+</body>
+</html>
