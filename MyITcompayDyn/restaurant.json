@@ -1,0 +1,56 @@
+{
+    "_commentTheme": "--- THIS IS THE Theme CONTENT SECTION ---",
+    "theme": {
+        "primaryColor": "#ea580c",
+        "bodyBackground": "#fff7ed",
+        "footerBackground": "#431407",
+        "headerImage": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=1600"
+    },
+    
+    "_commentHeader": "--- THIS IS THE Header CONTENT SECTION ---",
+    "header": {
+        "companyName": "Bistro Bella"
+    },
+    
+    "_commentServices": "--- THIS IS THE Menu CONTENT SECTION ---",
+    "services": [
+        {
+            "categoryTitle": "Starters & Appetizers",
+            "items": [
+                "Truffle Arancini with Garlic Aioli",
+                "Heirloom Tomato Bruschetta",
+                "Crispy Calamari",
+                "Artisan Cheese & Charcuterie Board"
+            ]
+        },
+        {
+            "categoryTitle": "Main Courses",
+            "items": [
+                "Wood-Fired Margherita Pizza",
+                "Hand-Rolled Truffle Gnocchi",
+                "Pan-Seared Atlantic Salmon",
+                "Braised Short Rib with Polenta"
+            ]
+        },
+        {
+            "categoryTitle": "Desserts",
+            "items": [
+                "Classic Tiramisu",
+                "Dark Chocolate Fondant",
+                "Lemon Ricotta Cheesecake"
+            ]
+        }
+    ],
+    
+    "_commentContact": "--- THIS IS THE Contact CONTENT SECTION ---",
+    "contact": {
+        "email": "reservations@bistrobella.com",
+        "phone": "+44 20 8989 5555",
+        "location": "Edinburgh, Scotland",
+        "social": {
+            "linkedin": "",
+            "github": "",
+            "twitter": "https://twitter.com"
+        }
+    }
+}

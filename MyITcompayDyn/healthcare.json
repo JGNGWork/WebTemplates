@@ -1,0 +1,55 @@
+{
+    "_commentTheme": "--- THIS IS THE Theme CONTENT SECTION ---",
+    "theme": {
+        "primaryColor": "#0d9488",
+        "bodyBackground": "#f0fdfa",
+        "footerBackground": "#115e59",
+        "headerImage": "https://images.unsplash.com/photo-1538108149393-cebb47acdd4e?w=1600"
+    },
+    
+    "_commentHeader": "--- THIS IS THE Header CONTENT SECTION ---",
+    "header": {
+        "companyName": "City Health Clinic"
+    },
+    
+    "_commentServices": "--- THIS IS THE Services CONTENT SECTION ---",
+    "services": [
+        {
+            "categoryTitle": "General Practice",
+            "items": [
+                "Routine Checkups & Physicals",
+                "Immunizations & Vaccines",
+                "Preventative Care",
+                "Pediatric Care"
+            ]
+        },
+        {
+            "categoryTitle": "Specialized Care",
+            "items": [
+                "Cardiology Consultations",
+                "Physical Therapy",
+                "Dermatology Screenings"
+            ]
+        },
+        {
+            "categoryTitle": "Patient Resources",
+            "items": [
+                "24/7 Telehealth Portal",
+                "Prescription Refills",
+                "Medical Records Access"
+            ]
+        }
+    ],
+    
+    "_commentContact": "--- THIS IS THE Contact CONTENT SECTION ---",
+    "contact": {
+        "email": "care@cityhealthclinic.com",
+        "phone": "+44 20 7123 4567",
+        "location": "Manchester, United Kingdom",
+        "social": {
+            "linkedin": "https://linkedin.com",
+            "github": "",
+            "twitter": "https://twitter.com"
+        }
+    }
+}

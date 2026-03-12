@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme Launcher</title>
+    <style>
+        /* Keeping the styling consistent with your main site's clean aesthetic */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f8fafc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: #0f172a;
+        }
+
+        .launcher-card {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .launcher-card h1 {
+            color: #1e293b;
+            margin-bottom: 10px;
+            font-size: 1.8rem;
+        }
+
+        .launcher-card p {
+            color: #64748b;
+            margin-bottom: 30px;
+            font-size: 0.95rem;
+        }
+
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 1rem;
+            color: #334155;
+            margin-bottom: 20px;
+            outline: none;
+            cursor: pointer;
+            transition: border-color 0.3s ease;
+        }
+
+        select:focus {
+            border-color: #38bdf8;
+        }
+
+        button {
+            width: 100%;
+            background-color: #38bdf8;
+            color: #ffffff;
+            border: none;
+            padding: 14px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.1s ease;
+        }
+
+        button:hover {
+            background-color: #0284c7;
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="launcher-card">
+        <h1>Site Launcher</h1>
+        <p>Select a client data file to preview the dynamic website.</p>
+
+        <select id="theme-selector">
+            <option value="content.json">Default: My IT Company</option>
+            <option value="healthcare.json">Theme: Healthcare Clinic</option>
+            <option value="restaurant.json">Theme: Local Restaurant</option>
+            <option value="startup.json">Theme: Tech Startup</option>
+        </select>
+
+        <button id="launch-btn">Launch Website</button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const launchBtn = document.getElementById('launch-btn');
+            const themeSelector = document.getElementById('theme-selector');
+
+            launchBtn.addEventListener('click', () => {
+                // Grab the selected JSON filename from the dropdown
+                const selectedTheme = themeSelector.value;
+                
+                // Redirect to the main index.html and pass the JSON filename in the URL
+                window.location.href = `index.html?theme=${encodeURIComponent(selectedTheme)}`;
+            });
+        });
+    </script>
+
+</body>
+</html>
