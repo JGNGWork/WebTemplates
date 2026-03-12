@@ -1,0 +1,20 @@
+# Content
+{
+    "themeColor": "#10b981",
+    "companyName": "My IT Company",
+    "email": "contact@myitcompany.com",
+    "phone": "+44 20 7946 0958",
+    "location": "London, United Kingdom",
+    "itServices": [
+        "Cloud Architecture & Migration",
+        "Network Security & Auditing",
+        "Infrastructure Management",
+        "24/7 Tech Support"
+    ],
+    "aiServices": [
+        "Machine Learning Model Training",
+        "Generative AI Integration",
+        "Predictive Data Analytics",
+        "NLP & Chatbot Development"
+    ]
+}
