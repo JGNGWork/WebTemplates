@@ -1,0 +1,51 @@
+{
+    "_commentTheme": "--- THIS IS THE Theme CONTENT SECTION ---",
+    "theme": {
+        "primaryColor": "#38bdf8",
+        "bodyBackground": "#ffffff",
+        "footerBackground": "#1e293b",
+        "headerImage": "https://images.unsplash.com/photo-1761906270046-85545d6011ff?w=1600"
+    },
+    
+    
+    "_commentHeader": "--- THIS IS THE Header CONTENT SECTION ---",
+    "header": {
+        "companyName": "My IT Company"
+    },
+    
+    
+    "_commentServices": "--- THIS IS THE Services CONTENT SECTION ---",
+    "services": [
+        {
+            "categoryTitle": "IT Services",
+            "items": [
+                "Cloud Architecture & Migration",
+                "Network Security & Auditing",
+                "Infrastructure Management",
+                "24/7 Tech Support"
+            ]
+        },
+        {
+            "categoryTitle": "AI Services",
+            "items": [
+                "Machine Learning Model Training",
+                "Generative AI Integration",
+                "Predictive Data Analytics",
+                "NLP & Chatbot Development"
+            ]
+        }
+    ],
+    
+    
+    "_commentContact": "--- THIS IS THE Contact CONTENT SECTION ---",
+    "contact": {
+        "email": "contact@myitcompany.com",
+        "phone": "+44 20 7946 0958",
+        "location": "London, United Kingdom",
+        "social": {
+            "linkedin": "https://linkedin.com",
+            "github": "https://github.com",
+            "twitter": "https://twitter.com"
+        }
+    }
+}
