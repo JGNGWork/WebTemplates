@@ -1,50 +1,67 @@
 {
     "_commentTheme": "--- THIS IS THE Theme CONTENT SECTION ---",
     "theme": {
-        "primaryColor": "#38bdf8",
-        "bodyBackground": "#ffffff",
-        "footerBackground": "#1e293b",
-        "headerImage": "https://images.unsplash.com/photo-1761906270046-85545d6011ff?w=1600"
+        "primaryColor": "#ea580c",
+        "bodyBackground": "#fff7ed",
+        "footerBackground": "#431407",
+        "headerImage": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=1600"
     },
-    
     
     "_commentHeader": "--- THIS IS THE Header CONTENT SECTION ---",
     "header": {
-        "companyName": "My IT Company"
+        "companyName": "SERVS-IT"
     },
     
-    
-    "_commentServices": "--- THIS IS THE Services CONTENT SECTION ---",
+    "_commentServices": "--- THIS IS THE Menu CONTENT SECTION ---",
     "services": [
         {
-            "categoryTitle": "IT Services",
+            "categoryTitle": "Custom Software & IT Development ",
             "items": [
-                "Cloud Architecture & Migration",
-                "Network Security & Auditing",
-                "Infrastructure Management",
-                "24/7 Tech Support"
+                "We build tailored digital solutions, apps, and systems that improve how your business operates.",
             ]
         },
         {
-            "categoryTitle": "AI Services",
+            "categoryTitle": "Data Analytics & AI Automation",
             "items": [
-                "Machine Learning Model Training",
-                "Generative AI Integration",
-                "Predictive Data Analytics",
-                "NLP & Chatbot Development"
+                "We turn your business data into insights and automate processes using AI to save time and increase efficiency"
+            ]
+        },
+        {
+            "categoryTitle": "Web Design & Digital Platforms",
+            "items": [
+                "We design and develop modern, high-performing websites and digital platforms."
+            ]
+        },
+        {
+            "categoryTitle": "UX/UI Design",
+            "items": [
+                "We create intuitive, user-friendly digital experiences that improve customer engagement."
+            ]
+        },
+        {
+            "categoryTitle": "Media & Digital Content",
+            "items": [
+                "We produce and edit professional digital media for websites, marketing, and online platforms"
+            ]
+        },
+        {
+            "categoryTitle": "ABOUT US",
+            "items": [
+                "We help businesses grow through technology by building custom software, analyzing data to generate insights, and implementing AI-powered automation to improve efficiency. Our team also creates intuitive user experiences (UX/UI) and professional digital media to ensure your products and services connect effectively with your customers."
             ]
         }
     ],
     
-    
     "_commentContact": "--- THIS IS THE Contact CONTENT SECTION ---",
     "contact": {
-        "email": "contact@myitcompany.com",
-        "phone": "+44 20 7946 0958",
-        "location": "London, United Kingdom",
+        "email": "servecies@servsit.com",
+        "phone": "+44 20 8989 5555",
+        "location": "Edinburgh, Scotland",
         "social": {
-            "linkedin": "https://linkedin.com",
-            "github": "https://github.com",
+            "whatsapp": "+44 20 8989 5555",
+            "telegram": "+44 20 8989 5555",
+            "linkedin": "",
+            "github": "",
             "twitter": "https://twitter.com"
         }
     }
