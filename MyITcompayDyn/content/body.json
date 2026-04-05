@@ -1,18 +1,5 @@
 {
-    "_commentTheme": "--- THIS IS THE Theme CONTENT SECTION ---",
-    "theme": {
-        "primaryColor": "#ea580c",
-        "bodyBackground": "#fff7ed",
-        "footerBackground": "#431407",
-        "headerImage": "https://images.unsplash.com/photo-1761906270046-85545d6011ff?w=1600"
-    },
-    
-    "_commentHeader": "--- THIS IS THE Header CONTENT SECTION ---",
-    "header": {
-        "companyName": "SERVS-IT"
-    },
-    
-    "_commentServices": "--- THIS IS THE Menu CONTENT SECTION ---",
+    "_commentServices": "--- THIS IS THE Services CONTENT SECTION ---",
     "services": [
         {
             "categoryTitle": "Custom Software & IT Development ",
@@ -43,26 +30,16 @@
             "items": [
                 "We produce and edit professional digital media for websites, marketing, and online platforms"
             ]
-        },
+        }
+    ],
+    
+    "_commentAbout": "--- THIS IS THE About CONTENT SECTION ---",
+    "about": [
         {
             "categoryTitle": "ABOUT US",
             "items": [
                 "We help businesses grow through technology by building custom software, analyzing data to generate insights, and implementing AI-powered automation to improve efficiency. Our team also creates intuitive user experiences (UX/UI) and professional digital media to ensure your products and services connect effectively with your customers."
             ]
         }
-    ],
-    
-    "_commentContact": "--- THIS IS THE Contact CONTENT SECTION ---",
-    "contact": {
-        "email": "servecies@servsit.com",
-        "phone": "+44 20 8989 5555",
-        "location": "Edinburgh, Scotland",
-        "social": {
-            "whatsapp": "+44 20 8989 5555",
-            "telegram": "+44 20 8989 5555",
-            "linkedin": "",
-            "github": "",
-            "twitter": "https://twitter.com"
-        }
-    }
+    ]
 }

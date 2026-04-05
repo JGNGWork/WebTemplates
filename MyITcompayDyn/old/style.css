@@ -1,8 +1,8 @@
 /* Define the global CSS variable with a fallback color */
 :root {
-    --theme-color: #000000; /* Nice Tech Blue default */
-    --body-bg: #000000;
-    --footer-bg: #000000;
+    --theme-color: #38bdf8; /* Nice Tech Blue default */
+    --body-bg: #ffffff;
+    --footer-bg: #1e293b;
     --header-image: url('https://images.unsplash.com/photo-1761906270046-85545d6011ff?w=1600');
 }
 

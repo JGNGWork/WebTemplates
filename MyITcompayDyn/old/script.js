@@ -119,6 +119,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (requestedTheme) {
         loadCompanyData(requestedTheme);
     } else {
-        loadCompanyData('samples/content.json');
+        loadCompanyData('content.json');
     }
 });
