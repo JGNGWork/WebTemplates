@@ -1,0 +1,14 @@
+{
+    "_commentTheme": "--- ENVIRONMENTAL TECH THEME ---",
+    "theme": {
+        "primaryColor": "#22c55e",
+        "bodyBackground": "#f0fdf4",
+        "footerBackground": "#14532d",
+        "cardBackground": "#ffffff",
+        "cardHeaderBackground": "#dcfce7",
+        "textMain": "#166534",
+        "textMuted": "#15803d",
+        "textOnDark": "#f0fdf4",
+        "headerImage": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1600"
+    }
+}

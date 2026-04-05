@@ -4,6 +4,11 @@
         "primaryColor": "#38bdf8",
         "bodyBackground": "#000000",
         "footerBackground": "#222222",
+        "cardBackground": "#ffffff",
+        "cardHeaderBackground": "#ffedd5",
+        "textMain": "#431407",
+        "textMuted": "#9a3412",
+        "textOnDark": "#ffedd5",
         "headerImage": "https://images.unsplash.com/photo-1761906270046-85545d6011ff?w=1600"
     }
 }
