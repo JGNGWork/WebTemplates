@@ -8,12 +8,12 @@
         "primaryColor": "#38bdf8",
         "bodyBackground": "#000000",
         "footerBackground": "#222222",
-        "cardBackground": "#ffffff",
-        "cardHeaderBackground": "#ffedd5",
-        "textMain": "#431407",
-        "textMuted": "#9a3412",
-        "textOnDark": "#ffedd5",
-        "bodyImage": "../src/bodyBG.jpg",
-        "headerImage": "../src/headerBG.jpg"
+        "cardBackground": "#1e293b",
+        "cardHeaderBackground": "#334155",
+        "textMain": "#f8fafc",
+        "textMuted": "#94a3b8",
+        "textOnDark": "#f8fafc",
+        "bodyImage": "src/bodyBG.jpg",
+        "headerImage": "src/headerBG.jpg"
     }
 }

@@ -64,6 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
             root.style.setProperty('--text-main', theme.textMain);
             root.style.setProperty('--text-muted', theme.textMuted);
             root.style.setProperty('--text-on-dark', theme.textOnDark);
+            root.style.setProperty('--body-image', `url('${theme.bodyImage}')`);
             root.style.setProperty('--header-image', `url('${theme.headerImage}')`);
 
             // 2. INJECT HEADER & CONTACT TEXT

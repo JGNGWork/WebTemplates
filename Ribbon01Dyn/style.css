@@ -117,7 +117,7 @@
 /* BODY SECTION */
 .body-section {
     position: relative;
-    background-color: var(--body-bg);
+    background: var(--body-image) center/cover no-repeat fixed, var(--body-bg);
     color: var(--text-main);
     padding: 48px 20px 120px 20px; /* Extra bottom padding for the next wave */
 }
@@ -226,7 +226,7 @@
     height: 55px;
     border: 2px solid var(--theme-color);
     border-radius: 50%; /* Makes them perfect circles */
-    /* color: var(--text-on-dark); / * Icon color */
+    color: var(--text-on-dark); /* Icon color */
     background-color: transparent; /* No background by default */
     transition: all 0.3s ease;
 }
@@ -235,7 +235,7 @@
 .social-links a svg {
     width: 28px;
     height: 28px;
-    /* Removed fill: currentColor; / * Matches the color of the text/link */
+    fill: currentColor; /* Matches the color of the text/link */
 }
 }
 

@@ -1,4 +1,8 @@
 {
+    "metadata": {
+        "date": "..."
+    },
+    
     "_commentTheme": "--- MIDNIGHT CORPORATE THEME ---",
     "theme": {
         "primaryColor": "#38bdf8",
@@ -9,6 +13,7 @@
         "textMain": "#f8fafc",
         "textMuted": "#94a3b8",
         "textOnDark": "#f8fafc",
+        "bodyImage": "src/bodyBG.jpg",
         "headerImage": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1600"
     }
 }

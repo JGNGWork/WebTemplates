@@ -1,4 +1,8 @@
 {
+    "metadata": {
+        "date": "..."
+    },
+    
     "_commentTheme": "--- ENVIRONMENTAL TECH THEME ---",
     "theme": {
         "primaryColor": "#22c55e",
@@ -9,6 +13,7 @@
         "textMain": "#166534",
         "textMuted": "#15803d",
         "textOnDark": "#f0fdf4",
+        "bodyImage": "src/bodyBG.jpg",
         "headerImage": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1600"
     }
 }

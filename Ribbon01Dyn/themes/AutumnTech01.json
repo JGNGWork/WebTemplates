@@ -1,4 +1,8 @@
 {
+    "metadata": {
+        "date": "..."
+    },
+    
     "_commentTheme": "--- THIS IS THE Theme CONTENT SECTION ---",
     "theme": {
         "primaryColor": "#ea580c",
@@ -9,7 +13,7 @@
         "textMain": "#431407",
         "textMuted": "#9a3412",
         "textOnDark": "#ffedd5",
-        "bodyImage": "../src/bodyBG.jpg",
+        "bodyImage": "src/bodyBG.jpg",
         "headerImage": "https://images.unsplash.com/photo-1761906270046-85545d6011ff?w=1600"
     }
 }
