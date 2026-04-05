@@ -12,7 +12,7 @@
     position: relative;
     height: 32vh;
     background-color: var(--body-bg);
-    background-image: linear-gradient(#00000033, #00000033), var(--header-image);
+    background-image: linear-gradient(#000000B3, #000000B3), var(--header-image);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -49,7 +49,7 @@
     /* Layer 1: Background Color (Fallback) */
     background-color: var(--body-bg); 
     /* Layer 2: Background Image (Injected via JS) */
-    background-image: var(--body-image);
+    background-image: linear-gradient(#000000CC, #000000CC),var(--body-image);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
