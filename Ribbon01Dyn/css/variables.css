@@ -10,8 +10,14 @@
     --text-main: #f8fafc;
     --text-muted: #94a3b8;
     --text-on-dark: #f8fafc;
-    --body-image: url('');
-    --header-image: url('');
+
+    /* Shadows */
+    --svg-shadow-color: rgba(0,0,0,0.6);
+    --bd-shadow-color: rgba(0,0,0,0.25);
+
+    /* Images - Initializing as 'none' ensures JS can inject url() properly */
+    --body-image: none;
+    --header-image: none;
 }
 
 /**

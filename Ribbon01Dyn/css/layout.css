@@ -11,7 +11,12 @@
 .top-section {
     position: relative;
     height: 32vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05)), var(--header-image) center/cover no-repeat;
+    background-color: var(--body-bg); 
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), var(--header-image);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -39,7 +44,14 @@
 
 .body-section {
     position: relative;
-    background: var(--body-image) center/cover no-repeat fixed, var(--body-bg);
+    /* Layer 1: Background Color (Fallback) */
+    background-color: var(--body-bg);
+    /* Layer 2: Background Image (Injected via JS) */
+    background-image: var(--body-image);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Parallax effect */
     color: var(--text-main);
     padding: 48px 20px 120px 20px;
 }
