@@ -168,7 +168,7 @@
             function updatePreview() {
                 const selectedTheme = themeSelector.value;
                 // Instead of redirecting the whole window, we just change the iframe's URL
-                sitePreview.src = `index.html?theme=${encodeURIComponent(selectedTheme)}`;
+                sitePreview.src = `../index.html?theme=${encodeURIComponent(selectedTheme)}`;
             }
 
             // Update iframe when button is clicked
