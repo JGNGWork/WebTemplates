@@ -59,7 +59,7 @@ async function initWebsite() {
         root.style.setProperty('--text-muted', theme.textMuted);
         root.style.setProperty('--text-on-dark', theme.textOnDark);
         root.style.setProperty('--svg-shadow-color', theme.svgShadowColor);
-        root.style.setProperty('--bd-shadow-color', theme.bdShadowColor;
+        root.style.setProperty('--bd-shadow-color', theme.bdShadowColor);
         root.style.setProperty('--header-tint', theme.WatermarkHeader);
         root.style.setProperty('--body-tint', theme.watermarkBody);
         root.style.setProperty('--body-image', `url('${theme.bodyImage}')`);
