@@ -1,9 +1,9 @@
 {
     "_commentTheme": "--- THIS IS THE Theme CONTENT SECTION ---",
     "theme": {
-        "primaryColor": "#ea580c",
-        "bodyBackground": "#222222",
-        "footerBackground": "#EEEEEE",
+        "primaryColor": "#38bdf8",
+        "bodyBackground": "#000000",
+        "footerBackground": "#222222",
         "headerImage": "https://images.unsplash.com/photo-1761906270046-85545d6011ff?w=1600"
     }
 }
