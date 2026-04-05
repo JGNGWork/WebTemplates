@@ -18,6 +18,6 @@
         "watermarkBody": "#000000CC",
         "WatermarkHeader": "#000000B3",
         "bodyImage": "../src/bodyBG.jpg",
-        "headerImage": "../src/headerBG.jpg"
+        "headerImage": "./src/headerBG.jpg"
     }
 }
