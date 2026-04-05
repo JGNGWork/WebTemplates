@@ -57,7 +57,9 @@
     background-repeat: no-repeat;
     background-attachment: fixed; /* Parallax effect */
     color: var(--text-main);
-    padding: 48px 20px 120px 20px;
+    margin-top: -100px; 
+    padding-top: 148px; /* Offsets the pull so content starts at the right place */
+    padding: 148px 20px 120px 20px;
 }
 
 .container {
