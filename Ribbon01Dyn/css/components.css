@@ -89,7 +89,7 @@
 
 .accordion-content li {
     padding: 10px 0;
-    border-bottom: 1px solid #0000000D;
+    border-bottom: 1px solid #0000000D; /* Subtle 5% black divider */
     color: var(--text-muted);
 }
 
@@ -125,7 +125,7 @@
 
 #dynamic-services-container .accordion-header {
     pointer-events: none; /* Disable individual header hover colors */
-    border-bottom: 1px solid #0000000D;
+    border-bottom: 1px solid #0000000D; /* Subtle 5% black divider */
 }
 
 #dynamic-services-container .accordion-content {
