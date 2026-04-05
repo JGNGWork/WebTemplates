@@ -11,7 +11,7 @@
 .top-section {
     position: relative;
     height: 32vh;
-    background-color: transparent; 
+    background-color: var(--body-bg); 
     background-image: linear-gradient(#00000033, #00000033), var(--header-image);
     background-position: center;
     background-size: cover;
@@ -47,9 +47,9 @@
 .body-section {
     position: relative;
     margin-top: -60px; 
-    padding-top: 120px; /* Offset the negative margin so content isn't covered */
+    padding-top: 100px; /* Offset the negative margin so content isn't covered */
     /* Layer 1: Background Color (Fallback) */
-    background-color: var(--body-bg);
+    background-color: transparent;
     /* Layer 2: Background Image (Injected via JS) */
     background-image: var(--body-image);
     background-position: center;
