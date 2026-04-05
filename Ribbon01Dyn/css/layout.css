@@ -46,8 +46,6 @@
 
 .body-section {
     position: relative;
-    margin-top: -60px; 
-    padding-top: 100px; /* Offset the negative margin so content isn't covered */
     /* Layer 1: Background Color (Fallback) */
     background-color: var(--body-bg); 
     /* Layer 2: Background Image (Injected via JS) */
