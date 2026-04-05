@@ -62,6 +62,9 @@ async function initWebsite() {
         root.style.setProperty('--bd-shadow-color', theme.bdShadowColor);
         root.style.setProperty('--header-tint', theme.watermarkHeader);
         root.style.setProperty('--body-tint', theme.watermarkBody);
+console.log("Full Theme Object:", theme);
+console.log("Body Path:", theme.bodyImage);
+console.log("Header Path:", theme.headerImage);
         root.style.setProperty('--body-image', `url('${theme.bodyImage}')`);
         root.style.setProperty('--header-image', `url('${theme.headerImage}')`);
 

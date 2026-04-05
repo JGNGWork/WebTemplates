@@ -44,7 +44,7 @@
 
 /* BASE ACCORDION ITEM */
 .accordion-item {
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     border-radius: 8px;
     box-shadow: 0 4px 15px var(--bd-shadow-color);
     overflow: hidden;
