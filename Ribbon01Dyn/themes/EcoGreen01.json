@@ -13,8 +13,8 @@
         "textMain": "#166534",
         "textMuted": "#15803d",
         "textOnDark": "#f0fdf4",
-        "svgShadowColor": "rgba(0, 0, 0, 0.6)",
-        "bdShadowColor": "rgba(0, 0, 0, 0.25)",
+        "svgShadowColor": "#00000099",
+        "bdShadowColor": "#00000040",
         "bodyImage": "src/bodyBG.jpg",
         "headerImage": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1600"
     }

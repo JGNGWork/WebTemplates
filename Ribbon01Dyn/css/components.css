@@ -89,7 +89,7 @@
 
 .accordion-content li {
     padding: 10px 0;
-    border-bottom: 1px solid rgba(0,0,0,0.05);
+    border-bottom: 1px solid #0000000D;
     color: var(--text-muted);
 }
 
@@ -125,7 +125,7 @@
 
 #dynamic-services-container .accordion-header {
     pointer-events: none; /* Disable individual header hover colors */
-    border-bottom: 1px solid rgba(0,0,0,0.05);
+    border-bottom: 1px solid #0000000D;
 }
 
 #dynamic-services-container .accordion-content {
@@ -167,6 +167,6 @@
 .social-links a:hover {
     background-color: var(--theme-color);
     color: var(--footer-bg); 
-    box-shadow: 0px 4px 15px rgba(56, 189, 248, 0.4); 
+    box-shadow: 0px 4px 15px var(--bd-shadow-color); 
     transform: translateY(-3px);
 }
