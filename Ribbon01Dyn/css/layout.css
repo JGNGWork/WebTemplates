@@ -12,9 +12,7 @@
     position: relative;
     height: 32vh;
     background-color: var(--body-bg);
-    background-image: linear-gradient(var(--header-tint)
-                                    , var(--header-tint))
-                    , var(--header-image);
+    background-image: linear-gradient(var(--header-tint), var(--header-tint)), var(--header-image);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -51,9 +49,7 @@
     /* Layer 1: Background Color (Fallback) */
     background-color: var(--body-bg); 
     /* Layer 2: Background Image (Injected via JS) */
-    background-image: linear-gradient(var(--body-tint)
-                                    , var(--body-tint))
-                    , var(--body-image);
+    background-image: linear-gradient(var(--body-tint), var(--body-tint)), var(--body-image);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
