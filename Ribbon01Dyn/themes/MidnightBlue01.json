@@ -13,6 +13,8 @@
         "textMain": "#f8fafc",
         "textMuted": "#94a3b8",
         "textOnDark": "#f8fafc",
+        "svgShadowColor": "rgba(0, 0, 0, 0.6)",
+        "bdShadowColor": "rgba(0, 0, 0, 0.25)",
         "bodyImage": "src/bodyBG.jpg",
         "headerImage": "src/headerBG.jpg"
     }

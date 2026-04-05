@@ -58,6 +58,8 @@ async function initWebsite() {
         root.style.setProperty('--text-main', theme.textMain);
         root.style.setProperty('--text-muted', theme.textMuted);
         root.style.setProperty('--text-on-dark', theme.textOnDark);
+        root.style.setProperty('--svg-shadow-color', theme.svgShadowColor || 'rgba(0,0,0,0.6)');
+        root.style.setProperty('--bd-shadow-color', theme.bdShadowColor || 'rgba(0,0,0,0.25)');
         root.style.setProperty('--body-image', `url('${theme.bodyImage}')`);
         root.style.setProperty('--header-image', `url('${theme.headerImage}')`);
 
@@ -72,6 +74,9 @@ async function initWebsite() {
         document.getElementById('contact-location').textContent = contactData.contact.location;
 
         // 4. Render UI Sections
+        const servicesWrapper = document.getElementById('services-section-title');
+        if(servicesWrapper) servicesWrapper.textContent = "Our Services";
+        
         renderFlashcards(servicesContainer, bodyData.services);
         renderAccordion(aboutContainer, bodyData.about);
 

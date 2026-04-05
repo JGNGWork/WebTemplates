@@ -3,15 +3,15 @@
  */
 :root {
     --theme-color: #38bdf8;
-    --body-bg: #ffffff;
-    --footer-bg: #0f172a;
-    --card-bg: #ffffff;
-    --card-header-bg: #f8fafc;
-    --text-main: #1e293b;
-    --text-muted: #64748b;
+    --body-bg: #000000;
+    --footer-bg: #000000;
+    --card-bg: #1e293b;
+    --card-header-bg: #334155;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
     --text-on-dark: #f8fafc;
-    --header-image: url('');
     --body-image: url('');
+    --header-image: url('');
 }
 
 /**

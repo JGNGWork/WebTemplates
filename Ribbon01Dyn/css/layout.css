@@ -85,6 +85,11 @@
     }
     .wave-bottom svg { height: 20px; }
     .body-section { padding: 48px 20px 80px 20px; }
+
+    #dynamic-services-container .accordion-item { 
+        flex: 0 0 240px;
+        height: 280px;
+    }
     
     .footer-container {
         flex-direction: column;
