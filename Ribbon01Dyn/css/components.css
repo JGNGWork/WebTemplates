@@ -25,6 +25,7 @@
 }
 .top-section .wave-mask {
     fill: var(--body-bg);
+    fill: transparent;
 }
 
 /* Bottom wave shadows */
