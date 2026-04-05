@@ -24,7 +24,7 @@
     filter: drop-shadow(0px 8px 8px var(--svg-shadow-color));
 }
 .top-section .wave-mask {
-    fill: none;
+    fill: var(--body-bg);
 }
 
 /* Bottom wave shadows */
