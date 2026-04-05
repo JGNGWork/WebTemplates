@@ -3,44 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Theme Dashboard</title>
+    <title>Theme Dashboard - Automated</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: sans-serif; }
-        body { display: flex; flex-direction: column; height: 100vh; background-color: #f1f5f9; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        body { display: flex; flex-direction: column; height: 100vh; background-color: #f1f5f9; overflow: hidden; }
+        
         .control-bar { 
             display: flex; align-items: center; justify-content: space-between; 
-            background: #fff; padding: 15px 30px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+            background: #ffffff; padding: 15px 30px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
+            z-index: 10;
         }
-        .controls { display: flex; gap: 10px; }
-        select { padding: 10px; border-radius: 5px; border: 1px solid #ccc; width: 200px; }
-        .preview-container { flex-grow: 1; padding: 20px; }
-        iframe { width: 100%; height: 100%; border: none; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); background: #fff; }
+
+        .branding { font-weight: bold; color: #1e293b; font-size: 1.2rem; }
+        
+        select { 
+            padding: 10px 15px; border: 2px solid #e2e8f0; border-radius: 8px; 
+            min-width: 250px; cursor: pointer; outline: none;
+        }
+        
+        select:focus { border-color: #38bdf8; }
+
+        .preview-container { flex-grow: 1; padding: 20px; display: flex; justify-content: center; }
+        
+        iframe { 
+            width: 100%; max-width: 1200px; height: 100%; border: none; 
+            border-radius: 12px; background: #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
+        }
+
+        /* Loading indicator for the dropdown */
+        option.loading { font-style: italic; color: #94a3b8; }
     </style>
 </head>
 <body>
 
     <div class="control-bar">
-        <div style="font-weight: bold; font-size: 1.2rem;">Customization Portal: Theme Preview</div>
+        <div class="branding">Customization Portal</div>
         <div class="controls">
             <select id="theme-selector">
-                <option value="default">Default Dark</option>
-                <option value="BlackBlue01">BlackBlue01 (Warm Orange)</option>
+                <option class="loading">Scanning themes...</option>
             </select>
         </div>
     </div>
 
     <div class="preview-container">
-        <iframe id="site-preview" src="../index.html?theme=default"></iframe>
+        <iframe id="site-preview" src="../index.html" title="Website Preview"></iframe>
     </div>
 
     <script>
-        const selector = document.getElementById('theme-selector');
-        const iframe = document.getElementById('site-preview');
+        const themeSelector = document.getElementById('theme-selector');
+        const sitePreview = document.getElementById('site-preview');
 
-        selector.addEventListener('change', () => {
-            // We only send the theme name now, script.js handles the pathing
-            iframe.src = `../index.html?theme=${selector.value}`;
-        });
+        /**
+         * Automatically populates the dropdown from the manifest file
+         */
+        async function populateThemes() {
+            try {
+                // Fetch the manifest from the themes folder
+                const response = await fetch('../themes/manifest.json');
+                if (!response.ok) throw new Error("Manifest not found");
+                
+                const data = await response.json();
+                
+                // Clear the "Loading" option
+                themeSelector.innerHTML = '';
+
+                // Create options dynamically
+                data.themes.forEach(theme => {
+                    const opt = document.createElement('option');
+                    opt.value = theme.id;
+                    opt.textContent = `Theme: ${theme.label}`;
+                    themeSelector.appendChild(opt);
+                });
+
+                // Set initial preview based on first theme in manifest
+                if (data.themes.length > 0) {
+                    updatePreview(data.themes[0].id);
+                }
+
+            } catch (error) {
+                console.error("Auto-population failed:", error);
+                themeSelector.innerHTML = '<option>Error loading themes</option>';
+            }
+        }
+
+        function updatePreview(themeId) {
+            sitePreview.src = `../index.html?theme=${themeId}`;
+        }
+
+        // Listener for manual changes
+        themeSelector.addEventListener('change', (e) => updatePreview(e.target.value));
+
+        //Initialise on load
+        document.addEventListener('DOMContentLoaded', populateThemes);
     </script>
 </body>
 </html>

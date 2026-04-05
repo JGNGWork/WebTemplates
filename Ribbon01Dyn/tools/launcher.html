@@ -3,114 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Theme Launcher</title>
+    <title>Corporate Site Launcher</title>
     <style>
-        /* Keeping the styling consistent with your main site's clean aesthetic */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-        }
-
-        body {
-            background-color: #f8fafc;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            color: #0f172a;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        body { background-color: #f8fafc; display: flex; align-items: center; justify-content: center; height: 100vh; color: #0f172a; }
+        
         .launcher-card {
-            background-color: #ffffff;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            width: 100%;
-            max-width: 400px;
+            background-color: #ffffff; padding: 40px; border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); text-align: center;
+            width: 100%; max-width: 450px;
         }
 
-        .launcher-card h1 {
-            color: #1e293b;
-            margin-bottom: 10px;
-            font-size: 1.8rem;
-        }
-
-        .launcher-card p {
-            color: #64748b;
-            margin-bottom: 30px;
-            font-size: 0.95rem;
-        }
+        .launcher-card h1 { color: #1e293b; margin-bottom: 10px; font-size: 1.8rem; }
+        .launcher-card p { color: #64748b; margin-bottom: 30px; font-size: 0.95rem; }
 
         select {
-            width: 100%;
-            padding: 12px;
-            border: 2px solid #e2e8f0;
-            border-radius: 8px;
-            font-size: 1rem;
-            color: #334155;
-            margin-bottom: 20px;
-            outline: none;
-            cursor: pointer;
-            transition: border-color 0.3s ease;
+            width: 100%; padding: 12px; border: 2px solid #e2e8f0; border-radius: 8px;
+            font-size: 1rem; color: #334155; margin-bottom: 20px; outline: none; cursor: pointer;
         }
 
-        select:focus {
-            border-color: #38bdf8;
-        }
+        select:focus { border-color: #38bdf8; }
+        select:disabled { background-color: #f1f5f9; cursor: not-allowed; }
 
         button {
-            width: 100%;
-            background-color: #38bdf8;
-            color: #ffffff;
-            border: none;
-            padding: 14px;
-            border-radius: 8px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.1s ease;
+            width: 100%; background-color: #38bdf8; color: #ffffff; border: none;
+            padding: 14px; border-radius: 8px; font-size: 1.1rem; font-weight: bold;
+            cursor: pointer; transition: all 0.3s ease;
         }
 
-        button:hover {
-            background-color: #0284c7;
-        }
-
-        button:active {
-            transform: scale(0.98);
-        }
+        button:hover { background-color: #0284c7; transform: translateY(-1px); }
+        button:disabled { background-color: #cbd5e1; cursor: not-allowed; }
     </style>
 </head>
 <body>
 
     <div class="launcher-card">
-        <h1>Site Launcher</h1>
-        <p>Select a client data file to preview the dynamic website.</p>
+        <h1>Client Portal</h1>
+        <p>Select a configuration to launch the dynamic website.</p>
 
-        <select id="theme-selector">
-            <option value="samples/restaurant.json">Default: Local Restaurant</option>
-            <option value="samples/healthcare.json">Theme: Healthcare Clinic</option>
-            <option value="samples/content.json">Theme: SERVS IT Company</option>
-            <option value="samples/MyITcompany.json">Theme: My IT Company</option>
-            <option value="samples/startup.json">Theme: Tech Startup</option>
+        <select id="theme-selector" disabled>
+            <option>Loading configurations...</option>
         </select>
 
-        <button id="launch-btn">Launch Website</button>
+        <button id="launch-btn" disabled>Launch Site</button>
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const launchBtn = document.getElementById('launch-btn');
-            const themeSelector = document.getElementById('theme-selector');
+        document.addEventListener('DOMContentLoaded', async () => {
+            const selector = document.getElementById('theme-selector');
+            const btn = document.getElementById('launch-btn');
 
-            launchBtn.addEventListener('click', () => {
-                // Grab the selected JSON filename from the dropdown
-                const selectedTheme = themeSelector.value;
+            try {
+                // 1. Fetch the manifest from the sibling themes folder
+                const response = await fetch('../themes/manifest.json');
+                if (!response.ok) throw new Error("Could not find manifest.json");
                 
-                // Redirect to the main index.html and pass the JSON filename in the URL
-                window.location.href = `../index.html?theme=${encodeURIComponent(selectedTheme)}`;
+                const data = await response.json();
+
+                // 2. Clear loader and populate options
+                selector.innerHTML = '';
+                data.themes.forEach(theme => {
+                    const opt = document.createElement('option');
+                    opt.value = theme.id;
+                    opt.textContent = theme.label;
+                    selector.appendChild(opt);
+                });
+
+                // 3. Enable UI
+                selector.disabled = false;
+                btn.disabled = false;
+
+            } catch (error) {
+                console.error("Launcher Error:", error);
+                selector.innerHTML = '<option>Error: No themes found</option>';
+            }
+
+            // 4. Handle Launch
+            btn.addEventListener('click', () => {
+                const themeId = selector.value;
+                // Redirect to root index with the chosen theme ID
+                window.location.href = `../index.html?theme=${encodeURIComponent(themeId)}`;
             });
         });
     </script>
