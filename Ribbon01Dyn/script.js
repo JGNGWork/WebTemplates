@@ -110,6 +110,31 @@ document.addEventListener('DOMContentLoaded', () => {
                     content.style.maxHeight = content.style.maxHeight ? null : content.scrollHeight + "px";
                 });
             });
+            
+            // --- DYNAMICALLY BUILD ABOUT ACCORDIONS ---
+            const aboutContainer = document.getElementById('dynamic-about-container');
+            if (aboutContainer && bodyData.about) {
+                aboutContainer.innerHTML = ''; // Clear previous content
+            
+                bodyData.about.forEach(section => {
+                    const aboutWrapper = document.createElement('div');
+                    aboutWrapper.className = 'about-content';
+            
+                    const h2 = document.createElement('h2');
+                    h2.textContent = section.categoryTitle;
+                    h2.style.color = 'var(--theme-color)'; // Keeps it branded
+                    h2.style.marginBottom = '20px';
+            
+                    const p = document.createElement('p');
+                    p.textContent = section.items[0]; // Grabs the text from the items array
+                    p.style.lineHeight = '1.6';
+                    p.style.fontSize = '1.1rem';
+            
+                    aboutWrapper.appendChild(h2);
+                    aboutWrapper.appendChild(p);
+                    aboutContainer.appendChild(aboutWrapper);
+                });
+            }''
 
             // 4. DYNAMICALLY BUILD SOCIAL LINKS
             const socialContainer = document.getElementById('dynamic-social-links');

@@ -1,0 +1,95 @@
+/**
+ * Base Layout & Typography
+ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+.top-section {
+    position: relative;
+    height: 32vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05)), var(--header-image) center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.top-section h1 {
+    color: #ffffff;
+    font-size: 4rem;
+    text-align: center;
+    padding: 0 20px 32px 20px;
+    /* Your original layered text shadows */
+    text-shadow: 
+        2px 2px 4px rgba(0, 0, 0, 0.9),
+        0px 0px 15px rgba(0, 0, 0, 0.6),
+        -1px -1px 0 #000000,  
+         1px -1px 0 #000000,
+        -1px  1px 0 #000000,
+         1px  1px 0 #000000,
+        2px 2px 8px rgba(0, 0, 0, 0.9), 
+        2px 2px 15px rgba(0, 0, 0, 0.8),
+        2px 2px 25px rgba(0, 0, 0, 0.6);
+    animation: fadeInUp 1.2s ease-out forwards;
+}
+
+.body-section {
+    position: relative;
+    background: var(--body-image) center/cover no-repeat fixed, var(--body-bg);
+    color: var(--text-main);
+    padding: 48px 20px 120px 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.bottom-section {
+    background-color: var(--footer-bg);
+    color: var(--text-on-dark);
+    padding: 28px 20px 26px 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.footer-container h2 { 
+    color: var(--theme-color); 
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 600px) {
+    .top-section { height: 18vh; }
+    .top-section h1 { 
+        font-size: 2.8rem; 
+        padding: 20px 20px 12px 20px;
+        margin-top: 48%;
+        margin-bottom: 56%;
+    }
+    .wave-bottom svg { height: 20px; }
+    .body-section { padding: 48px 20px 80px 20px; }
+    
+    .footer-container {
+        flex-direction: column;
+        align-items: center;    
+        text-align: center;     
+        gap: 40px;              
+    }
+}

@@ -1,0 +1,157 @@
+/**
+ * UI Components & Interactivity
+ */
+
+/* WAVE DIVIDERS */
+.wave-bottom {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+/* Top wave shadows */
+.top-section .wave-bottom svg {
+    display: block;
+    width: 100%;
+    height: 60px;
+    padding: 12px 0px 0px 0px;
+}
+.top-section .floating-ribbon {
+    stroke: var(--theme-color);
+    filter: drop-shadow(0px 8px 8px rgba(0, 0, 0, 0.6));
+}
+.top-section .wave-mask {
+    fill: var(--body-bg);
+}
+
+/* Bottom wave shadows */
+.body-section .wave-bottom svg {
+    display: block;
+    width: 100%;
+    height: 60px;
+    padding: 22px 0px 0px 0px;
+}
+.body-section .floating-ribbon {
+    stroke: var(--theme-color);
+    filter: drop-shadow(0px -8px 8px rgba(0, 0, 0, 0.6));
+}
+.body-section .wave-mask {
+    fill: var(--footer-bg);
+}
+
+/* BASE ACCORDION ITEM */
+.accordion-item {
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+    overflow: hidden;
+    background-color: var(--card-bg);
+}
+
+.accordion-header {
+    width: 100%;
+    background-color: var(--card-header-bg);
+    color: var(--text-main);
+    padding: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover, .accordion-header.active {
+    background-color: var(--theme-color); 
+    color: white;
+}
+
+.accordion-content {
+    background-color: var(--card-bg);
+    max-height: 0; 
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+}
+
+.accordion-content ul {
+    list-style-type: none;
+    padding: 20px;
+}
+
+.accordion-content li {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    color: var(--text-muted);
+}
+
+/* FLASHCARD SLIDER MODIFIER */
+#dynamic-services-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px 10px 40px 10px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+#dynamic-services-container .accordion-item {
+    flex: 0 0 280px; 
+    height: 320px;   
+    margin-bottom: 0; 
+    scroll-snap-align: center;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, border 0.3s ease;
+}
+
+#dynamic-services-container .accordion-content {
+    max-height: none !important; 
+    display: flex;
+    padding: 20px;
+    text-align: center;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+/* SOCIAL LINKS */
+.social-links {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    border: 2px solid var(--theme-color);
+    border-radius: 50%;
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+.social-links a svg {
+    width: 28px;
+    height: 28px;
+}
+
+.social-links a:hover {
+    background-color: var(--theme-color);
+    color: var(--footer-bg); 
+    box-shadow: 0px 4px 15px rgba(56, 189, 248, 0.4); 
+    transform: translateY(-3px);
+}

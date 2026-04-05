@@ -1,0 +1,23 @@
+/**
+ * UI Variables & Theme Fallbacks
+ */
+:root {
+    --theme-color: #38bdf8;
+    --body-bg: #ffffff;
+    --footer-bg: #0f172a;
+    --card-bg: #ffffff;
+    --card-header-bg: #f8fafc;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --text-on-dark: #f8fafc;
+    --header-image: url('');
+    --body-image: url('');
+}
+
+/**
+ * UI Animations
+ */
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}

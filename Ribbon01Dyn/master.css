@@ -1,0 +1,17 @@
+/**
+ * Master Stylesheet
+ * Imports all sub-modules to build the full UI.
+ */
+@import url('css/variables.css');
+@import url('css/layout.css');
+@import url('css/components.css');
+
+
+/* Custom scrollbar for Flashcard track */
+#dynamic-services-container::-webkit-scrollbar {
+    height: 6px;
+}
+#dynamic-services-container::-webkit-scrollbar-thumb {
+    background: var(--theme-color);
+    border-radius: 10px;
+}
