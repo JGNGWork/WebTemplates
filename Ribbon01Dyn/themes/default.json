@@ -15,7 +15,7 @@
         "textOnDark": "#f8fafc",
         "svgShadowColor": "#38bdf899",
         "bdShadowColor": "#38bdf840",
-        "bodyImage": "src/bodyBG.jpg",
-        "headerImage": "src/headerBG.jpg"
+        "bodyImage": "./src/bodyBG.jpg",
+        "headerImage": "./src/headerBG.jpg"
     }
 }
