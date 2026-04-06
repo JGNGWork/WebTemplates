@@ -124,8 +124,8 @@
     }
 
     #dynamic-services-container .accordion-item { 
-        flex: 0 0 240px;
-        height: 280px;
+        flex: 0 0 140px;
+        /* height: 280px; */
     }
     
     .footer-container {
