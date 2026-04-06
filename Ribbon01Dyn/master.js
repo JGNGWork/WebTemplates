@@ -103,22 +103,40 @@ console.log("Header Path:", theme.headerImage);
         
         
         // 6. Scroll Dots for FlashCards
-        const dotsContainer = document.getElementById('scroll-dots');
         const services = bodyData.services;
+        const container = document.getElementById('dynamic-services-container');
+        const dotsContainer = document.getElementById('scroll-dots');
 
-        // 6.1. Create the dots
-        services.forEach((_, index) => {
-            const dot = document.createElement('div');
-            dot.className = index === 0 ? 'dot active' : 'dot';
-            dotsContainer.appendChild(dot);
-        });
+        // 6.1. Calculate how many dots we actually need
+        function updateDots() {
+            dotsContainer.innerHTML = ''; // Clear old dots
+            
+            const cardWidth = container.querySelector('.accordion-item').offsetWidth + 20; // width + gap
+            const visibleCards = Math.floor(container.offsetWidth / cardWidth);
+            const totalDots = Math.max(1, services.length - visibleCards + 1);
+        
+            for (let i = 0; i < totalDots; i++) {
+                const dot = document.createElement('div');
+                dot.className = i === 0 ? 'dot active' : 'dot';
+                dotsContainer.appendChild(dot);
+            }
+        }
 
-        // 6.2. Update dots on scroll
-        servicesContainer.addEventListener('scroll', () => {
-            const scrollIndex = Math.round(servicesContainer.scrollLeft / 380); // 380 = card width + gap
+        // 6.2. Update active dot based on percentage of scroll
+        setTimeout(updateDots, 100);
+        container.addEventListener('scroll', () => {
             const dots = dotsContainer.querySelectorAll('.dot');
+            if (dots.length === 0) return;
+        
+            const maxScroll = container.scrollWidth - container.offsetWidth;
+            const scrollPercentage = container.scrollLeft / maxScroll;
+            const activeIndex = Math.min(
+                dots.length - 1,
+                Math.floor(scrollPercentage * dots.length + 0.5)
+            );
+        
             dots.forEach((dot, i) => {
-                dot.classList.toggle('active', i === scrollIndex);
+                dot.classList.toggle('active', i === activeIndex);
             });
         });
 
