@@ -1,11 +1,19 @@
-/**
+/**************************************************
  * Master Stylesheet
  * Imports all sub-modules to build the full UI.
- */
+ **************************************************/
 @import url('css/variables.css');
 @import url('css/layout.css');
-@import url('css/components.css');
 
+/**************************************************
+* UI Components & Interactivity 
+**************************************************/
+@import url('css/ribbon-waves.css');
+@import url('css/accordion.css);
+@import url('css/flashcard.css);
+@import url('css/scroll-dots.css);
+@import url('css/social.css);
+/**************************************************/
 
 /* Custom scrollbar for Flashcard track */
 #dynamic-services-container::-webkit-scrollbar {
