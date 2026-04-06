@@ -53,6 +53,7 @@ async function initWebsite() {
         root.style.setProperty('--theme-color', theme.primaryColor);
         root.style.setProperty('--body-bg', theme.bodyBackground);
         root.style.setProperty('--footer-bg', theme.footerBackground);
+        root.style.setProperty('--card-container-bg', theme.cardContainerBG);
         root.style.setProperty('--card-bg', theme.cardBackground);
         root.style.setProperty('--card-header-bg', theme.cardHeaderBackground);
         root.style.setProperty('--text-main', theme.textMain);

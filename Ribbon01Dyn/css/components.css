@@ -100,9 +100,18 @@
     flex-wrap: nowrap;
     overflow-x: auto;
     gap: 20px;
+    background-color: var(--card-container-bg);
+    
+    /* Styling for a "glass" look */
     padding: 20px 10px 40px 10px;
+    padding: 30px 20px;
+    border-radius: 15px;
+    border: 1px solid #ffffff1a; /* Subtle white border */
+    backdrop-filter: blur(5px); /* Frosty effect over the bodyImage */
+    
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
+    margin-bottom: 40px;
 }
 
 #dynamic-services-container .accordion-item {
