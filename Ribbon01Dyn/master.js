@@ -78,9 +78,17 @@ async function initWebsite() {
 
         // 3.2 Update all elements with id="company-title" (like <h1> or <h2>)
         titleElements.forEach(el => el.textContent = headerData.header.companyName);
+        
+        // 3.3 Update Contact Info
         document.getElementById('contact-email').textContent = contactData.contact.email;
         document.getElementById('contact-phone').textContent = contactData.contact.phone;
         document.getElementById('contact-location').textContent = contactData.contact.location;
+        
+        // NEW: Update the Booking Button URL
+        const bookingBtn = document.getElementById('booking-link');
+        if (bookingBtn && contactData.contact.bookingUrl) {
+            bookingBtn.href = contactData.contact.bookingUrl;
+        }
 
         // 4. Render UI Sections
         const servicesWrapper = document.getElementById('services-section-title');
