@@ -20,8 +20,8 @@
         "svgShadowColor": "#38bdf899",
         "bdShadowColor": "#38bdf840",
         "watermarkBody": "#000000EC",
-        "watermarkHeader": "#000000E3",
+        "watermarkHeader": "#000000D3",
         "bodyImage": "../src/bodyBG.jpg",
-        "headerImage": "../src/headerBG.jpg"
+        "headerImage": ""
     }
 }
