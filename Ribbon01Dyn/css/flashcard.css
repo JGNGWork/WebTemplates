@@ -12,15 +12,15 @@
     text-shadow: 
         2px 2px 4px rgba(0, 0, 0, 0.9),
         0px 0px 15px rgba(0, 0, 0, 0.6),
-        2px 2px 4px #000000E6,
-        0px 0px 15px #00000099,
-        -1px -1px 0 #000000,  
-         1px -1px 0 #000000,
-        -1px  1px 0 #000000,
-         1px  1px 0 #000000,
-        2px 2px 8px #000000E6, 
-        2px 2px 15px #000000CC,
-        2px 2px 25px #00000099;
+        2px 2px 4px #AAAAAAE6,
+        0px 0px 15px #AAAAAA99,
+        -1px -1px 0 #AAAAAA,  
+         1px -1px 0 #AAAAAA,
+        -1px  1px 0 #AAAAAA,
+         1px  1px 0 #AAAAAA,
+        2px 2px 8px #AAAAAAE6, 
+        2px 2px 15px #AAAAAACC,
+        2px 2px 25px #AAAAAA99;
 }
 
 /* FLASHCARD SLIDER MODIFIER */
