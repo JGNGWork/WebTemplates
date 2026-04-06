@@ -19,8 +19,8 @@
         "textShadowCC": "#38bdf8CC",
         "svgShadowColor": "#38bdf899",
         "bdShadowColor": "#38bdf840",
-        "watermarkBody": "#0f172aCC",
-        "watermarkHeader": "#0f172aB3",
+        "watermarkBody": "#0f172aEC",
+        "watermarkHeader": "#0f172aD3",
         "bodyImage": "../src/bodyBG.jpg",
         "headerImage": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1600"
     }

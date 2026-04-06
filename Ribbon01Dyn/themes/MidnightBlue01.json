@@ -19,8 +19,8 @@
         "textShadowCC": "#38bdf8CC",
         "svgShadowColor": "#38bdf899",
         "bdShadowColor": "#38bdf840",
-        "watermarkBody": "#000000CC",
-        "watermarkHeader": "#000000B3",
+        "watermarkBody": "#000000EC",
+        "watermarkHeader": "#000000D3",
         "bodyImage": "../src/bodyBG.jpg",
         "headerImage": "../src/headerBG.jpg"
     }
