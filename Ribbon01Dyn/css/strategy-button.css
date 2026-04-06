@@ -1,0 +1,73 @@
+/**
+ * Strategy Button & CTA Container
+ * Modern, high-contrast button with a glowing hover effect.
+ */
+ 
+/* 1. Positioning Container 
+   Ensures the button is centered and stays above background layers. */
+.cta-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center; /* Centers the button horizontally */
+    position: relative;
+    z-index: 20;            /* Keeps button above wave masks and ribbons */
+}
+
+/* 2. Base Button Styles 
+   The "Pill" shape and initial shadow depth. */
+.btn-strategy {
+    display: inline-block;
+    padding: 14px 28px;
+    
+    /* Professional Yellow Palette */
+    background-color: #facc15; /* (Tailwind yellow-400) */
+    color: #1a1a1a;           /* Dark grey text for high contrast */
+    
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border-radius: 50px;       /* Pill shape */
+    
+    /* Border is transparent initially to prevent layout "jump" on hover */
+    border: 2px solid transparent; 
+    
+    /* Animation Timing: cubic-bezier gives a "snappy" spring feel */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* Subtle initial shadow for a 3D lift */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+/* 3. Hover State 
+   Triggers the elevation (translateY) and the outer glow. */
+.btn-strategy:hover {
+    background-color: #fef08a; /* Brightens the surface color */
+    
+    /* Move up 3px and grow 2% for a "pop-out" effect */
+    transform: translateY(-3px) scale(1.02);
+    
+    /* THE GLOW: 
+       0 0: No offset (centers the glow around the button)
+       20px: Blur radius
+       5px: Spread radius (thickness of the glow core)
+       rgba(... 0.6): Yellow glow with 60% opacity
+    */
+    box-shadow: 0 0 20px 5px rgba(250, 204, 21, 0.6); /* Yellow Glow */
+    
+    /* Define the edge against the glow */
+    border-color: #facc15;
+}
+
+/* 4. Pushed (Active) State 
+   Provides physical feedback when the user clicks/taps. */
+.btn-strategy:active {
+    /* "Presses" the button into the page */
+    transform: translateY(1px) scale(0.98);
+    
+    /* Tightens the glow to look "compressed" */
+    box-shadow: 0 0 10px 2px rgba(250, 204, 21, 0.8);
+    
+    /* Darkens the yellow to simulate a physical push */
+    background-color: #eab308; /* Slightly darker gold */ 
+}
