@@ -6,8 +6,21 @@
     color: var(--theme-color);
     font-size: 2rem;
     margin-bottom: 30px; /* Space between title and the blue container */
+    padding: -20px 20px 20px 20px;
     text-align: center;
     width: 100%;
+    text-shadow: 
+        2px 2px 4px rgba(0, 0, 0, 0.9),
+        0px 0px 15px rgba(0, 0, 0, 0.6),
+        2px 2px 4px #000000E6,
+        0px 0px 15px #00000099,
+        -1px -1px 0 #000000,  
+         1px -1px 0 #000000,
+        -1px  1px 0 #000000,
+         1px  1px 0 #000000,
+        2px 2px 8px #000000E6, 
+        2px 2px 15px #000000CC,
+        2px 2px 25px #00000099;
 }
 
 /* FLASHCARD SLIDER MODIFIER */
@@ -20,7 +33,7 @@
     
     /* Styling for a "glass" look */
     background-color: var(--card-container-bg);
-    padding: 10px 20px 10px 20px;
+    padding: 20px 20px 20px 20px;
     border-radius: 15px;
     border: 2px solid #ffffff1a; /* Subtle white border */
     backdrop-filter: blur(15px); /* Frosty effect over the bodyImage */
