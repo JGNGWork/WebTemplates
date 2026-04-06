@@ -46,8 +46,6 @@
 
 .body-section {
     position: relative;
-    margin-top: -100px; 
-    padding-top: 148px; /* Offsets the pull so content starts at the right place */
     /* Layer 1: Background Color (Fallback) */
     background-color: var(--body-bg); 
     /* Layer 2: Background Image (Injected via JS) */
