@@ -78,6 +78,13 @@ async function initWebsite() {
             document.body.style.backgroundSize = "cover";
             document.body.style.backgroundPosition = "center";
         }
+        
+        const headerEl = document.querySelector('.top-section');
+        if (theme.headerImage && theme.headerImage !== "") {
+            headerEl.classList.add('has-image'); // This triggers the CSS override
+        } else {
+            headerEl.classList.remove('has-image'); // Header stays transparent
+        }
 
         // 3. Update Text Content
         // 3.1 Browser Tab Title
