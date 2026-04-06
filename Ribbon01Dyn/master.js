@@ -123,7 +123,11 @@ async function initWebsite() {
         }
 
         // 6.2. Update active dot based on percentage of scroll
-        setTimeout(updateDots, 100);
+        const resizeObserver = new ResizeObserver(() => {
+            updateDots();
+        });
+        resizeObserver.observe(container);
+        
         container.addEventListener('scroll', () => {
             const dots = dotsContainer.querySelectorAll('.dot');
             if (dots.length === 0) return;
