@@ -80,10 +80,13 @@ async function initWebsite() {
         }
         
         const headerEl = document.querySelector('.top-section');
+        const bodyEl = document.querySelector('.body-section');
         if (theme.headerImage && theme.headerImage !== "") {
             headerEl.classList.add('has-image'); // This triggers the CSS override
+            bodyEl.classList.add('has-image'); // This triggers the CSS override
         } else {
             headerEl.classList.remove('has-image'); // Header stays transparent
+            bodyEl.classList.remove('has-image'); // Header stays transparent
         }
 
         // 3. Update Text Content

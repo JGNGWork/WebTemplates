@@ -12,13 +12,6 @@
 .top-section {
     position: relative;
     height: 22vh;
-    background-color: transparent; !important;
-    background-image: 
-        linear-gradient(var(--header-tint), var(--header-tint)), 
-        var(--header-image) !important;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
     
     display: flex;
     align-items: center;
@@ -62,16 +55,6 @@
 
 .body-section {
     position: relative;
-    /* Layer 1: Background Color (Fallback) */
-    background-color: var(--body-bg); 
-    /* Layer 2: Background Image (Injected via JS) */
-    background-image: 
-        linear-gradient(var(--body-tint), var(--body-tint)), 
-        var(--body-image); !important;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed; /* Parallax effect */
     color: var(--text-main);
     margin-top: -100px; 
     padding-top: 148px; /* Offsets the pull so content starts at the right place */
@@ -101,8 +84,24 @@ body {
     background-image: 
         linear-gradient(var(--header-tint), var(--header-tint)), 
         var(--header-image) !important;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
 }
 
+.body-section.has-image {
+    /* Layer 1: Background Color (Fallback) */
+    background-color: var(--body-bg); 
+    /* Layer 2: Background Image (Injected via JS) */
+    background-image: 
+        linear-gradient(var(--body-tint), var(--body-tint)), 
+        var(--body-image); !important;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Parallax effect */
+}
 
 
 .container {
