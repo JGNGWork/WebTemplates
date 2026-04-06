@@ -69,8 +69,19 @@ async function initWebsite() {
         root.style.setProperty('--bd-shadow-color', theme.bdShadowColor);
         root.style.setProperty('--header-tint', theme.watermarkHeader);
         root.style.setProperty('--body-tint',   theme.watermarkBody);
-        root.style.setProperty('--body-image', `url('../${theme.bodyImage}')` || `url('../${theme.bodyImage}')`);
-        root.style.setProperty('--header-image', `url('../${theme.headerImage}')` || `url('${theme.headerImage}')`);
+        
+        // Helper function to safely format the URL path
+        const getImagePath = (path) => {
+            if (!path || path === "") return "none";
+            // If the path already starts with http or dots, don't add ../
+            if (path.startsWith('http') || path.startsWith('.')) return `url('${path}')`;
+            // Otherwise, add the parent directory prefix
+            return `url('../${path}')`;
+        };
+        
+        // Inject the properties into CSS
+        root.style.setProperty('--body-image', getImagePath(theme.bodyImage));
+        root.style.setProperty('--header-image', getImagePath(theme.headerImage));
         
         if (theme.bodyImage) {
             document.body.style.backgroundImage = `url("${theme.bodyImage}")`;
