@@ -18,7 +18,7 @@
     #dynamic-services-container {
         border: 1px solid #ffffff1a; /* Subtle white border */ }
     #dynamic-services-container .accordion-item { 
-        flex: 0 0 200px;
+        flex: 0 0 220px;
         /* height: 280px; */
     }
     
