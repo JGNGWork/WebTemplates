@@ -22,7 +22,7 @@
     background-color: var(--card-container-bg);
     padding: 10px 20px 10px 20px;
     border-radius: 15px;
-    border: 12px solid #ffffff1a; /* Subtle white border */
+    border: 2px solid #ffffff1a; /* Subtle white border */
     backdrop-filter: blur(15px); /* Frosty effect over the bodyImage */
     
     scroll-snap-type: x mandatory;
