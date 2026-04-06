@@ -71,6 +71,12 @@
     padding: 28px 20px 26px 20px;
 }
 
+.body-section .container {
+    max-width: 1200px; /* Increased from 800px */
+    width: 95%;        /* Ensures it doesn't touch the edges on mid-size screens */
+    margin: 0 auto;
+}
+
 .footer-container {
     display: flex;
     justify-content: space-between;

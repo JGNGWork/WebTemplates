@@ -100,6 +100,27 @@ console.log("Header Path:", theme.headerImage);
                 }
             }
         }
+        
+        
+        // 6. Scroll Dots for FlashCards
+        const dotsContainer = document.getElementById('scroll-dots');
+        const services = bodyData.services;
+
+        // 6.1. Create the dots
+        services.forEach((_, index) => {
+            const dot = document.createElement('div');
+            dot.className = index === 0 ? 'dot active' : 'dot';
+            dotsContainer.appendChild(dot);
+        });
+
+        // 6.2. Update dots on scroll
+        servicesContainer.addEventListener('scroll', () => {
+            const scrollIndex = Math.round(servicesContainer.scrollLeft / 380); // 380 = card width + gap
+            const dots = dotsContainer.querySelectorAll('.dot');
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === scrollIndex);
+            });
+        });
 
     } catch (error) {
         console.error("Critical Load Error:", error);
