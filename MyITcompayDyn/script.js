@@ -35,8 +35,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.log("Header Title: ", data.header.companyName);
                 document.title = data.header.companyName;
                 // 3.2 Update all elements with id="company-title" (like <h1> or <h2>)
-                document.getElementById('company-title').forEach(el => el.textContent = data.header.companyName);
-                document.getElementById('company-title').textContent = data.header.companyName;
+                const titleElements = document.querySelectorAll('#company-title');
+                titleElements.forEach(el => el.textContent = data.header.companyName);
+
+                //document.getElementById('company-title').textContent = data.header.companyName;
                 document.getElementById('contact-email').textContent = data.contact.email;
                 document.getElementById('contact-phone').textContent = data.contact.phone;
                 document.getElementById('contact-location').textContent = data.contact.location;
