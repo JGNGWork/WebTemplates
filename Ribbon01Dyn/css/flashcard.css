@@ -2,6 +2,14 @@
  * Flashcards Components
  */
 
+.section-title {
+    color: var(--theme-color);
+    font-size: 2rem;
+    margin-bottom: 30px; /* Space between title and the blue container */
+    text-align: center;
+    width: 100%;
+}
+
 /* FLASHCARD SLIDER MODIFIER */
 #dynamic-services-container {
     display: flex;
