@@ -22,6 +22,6 @@
         "watermarkBody": "#000000DC",
         "watermarkHeader": "#000000D3",
         "bodyImage": "src/bodyBG.jpg",
-        "headerImage": ""
+        "headerImage": "src/headerBG.jpg"
     }
 }

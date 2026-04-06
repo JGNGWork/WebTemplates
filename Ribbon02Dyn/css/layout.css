@@ -8,22 +8,14 @@
     font-family: 'Segoe UI', Roboto, sans-serif;
 }
 
-body {
-    margin: 0;
-    /* The first background is the tint (Master), the second is the Image */
-    background-image: 
-        linear-gradient(var(--body-tint), var(--body-tint)), 
-        var(--body--image);
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    background-color: black; /* Fallback */
-}
 
 .top-section {
     position: relative;
     height: 22vh;
     background-color: transparent; !important;
+    background-image: 
+        linear-gradient(var(--header-tint), var(--header-tint)), 
+        var(--header-image) !important;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -34,15 +26,6 @@ body {
     z-index: 10;
 }
 
-.top-section.has-image {
-    /* Instead of a solid tint, we fade the header picture into transparency at the bottom */
-    background-image: 
-        linear-gradient(to bottom, var(--header-tint), transparent), 
-        var(--header-image) !important;
-    
-    background-size: cover;
-    background-position: center;
-}
 
 .top-section h1 {
     color: #ffffff;
@@ -82,7 +65,9 @@ body {
     /* Layer 1: Background Color (Fallback) */
     background-color: var(--body-bg); 
     /* Layer 2: Background Image (Injected via JS) */
-    background-image: linear-gradient(var(--body-tint), var(--body-tint)), var(--body-image); !important;
+    background-image: 
+        linear-gradient(var(--body-tint), var(--body-tint)), 
+        var(--body-image); !important;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -92,6 +77,33 @@ body {
     padding-top: 148px; /* Offsets the pull so content starts at the right place */
     padding: 148px 20px 120px 20px;
 }
+
+body {
+    margin: 0;
+    /* The first background is the tint (Master), the second is the Image */
+    background-image: 
+        linear-gradient(var(--body-tint), var(--body-tint)), 
+        var(--body--image);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-color: black; /* Fallback */
+}
+
+.top-section, .body-section {
+    /* Force these to be transparent so the body wallpaper shows through */
+    background-color: transparent !important;
+    background-image: none !important; 
+}
+
+/* If a Header Image IS provided, we re-enable it only for the header */
+.top-section.has-image {
+    background-image: 
+        linear-gradient(var(--header-tint), var(--header-tint)), 
+        var(--header-image) !important;
+}
+
+
 
 .container {
     max-width: 800px;
