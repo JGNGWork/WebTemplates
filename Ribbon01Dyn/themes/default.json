@@ -7,7 +7,7 @@
     "theme": {
         "primaryColor": "#38bdf8",
         "bodyBackground": "#000000",
-        "footerBackground": "#222222",
+        "footerBackground": "#222222CC",
         "cardContainerBG": "#38bdf822",
         "cardBackground": "#1e293b99",
         "cardHeaderBackground": "#33415599",
