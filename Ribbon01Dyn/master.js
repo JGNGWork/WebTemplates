@@ -83,13 +83,6 @@ async function initWebsite() {
         root.style.setProperty('--body-image', getImagePath(theme.bodyImage));
         root.style.setProperty('--header-image', getImagePath(theme.headerImage));
         
-        if (theme.bodyImage) {
-            document.body.style.backgroundImage = `url("${theme.bodyImage}")`;
-            document.body.style.backgroundAttachment = "fixed";
-            document.body.style.backgroundSize = "cover";
-            document.body.style.backgroundPosition = "center";
-        }
-        
         const headerEl = document.querySelector('.top-section');
         const bodyEl = document.querySelector('.body-section');
         if (theme.headerImage && theme.headerImage !== "") {

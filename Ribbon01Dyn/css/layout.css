@@ -68,7 +68,7 @@ body {
     /* The first background is the tint (Master), the second is the Image */
     background-image: 
         linear-gradient(var(--body-tint), var(--body-tint)), 
-        var(--body--image); !important;
+        var(--body-image); !important;
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
