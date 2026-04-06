@@ -1,0 +1,64 @@
+/**
+ * Flashcards Components
+ */
+
+/* FLASHCARD SLIDER MODIFIER */
+#dynamic-services-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 30px;
+    
+    /* Styling for a "glass" look */
+    background-color: var(--card-container-bg);
+    padding: 20px 10px 30px 10px;
+    border-radius: 15px;
+    border: 1px solid #ffffff1a; /* Subtle white border */
+    backdrop-filter: blur(15px); /* Frosty effect over the bodyImage */
+    
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    
+    /* HIDE DEFAULT SCROLLBAR */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE/Edge */
+}
+
+#dynamic-services-container::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+#dynamic-services-container .accordion-item {
+    flex: 0 0 280px; 
+    /* height: 320px; */  
+    margin-bottom: 0; 
+    scroll-snap-align: center;
+    display: flex;
+    flex-direction: column;
+    /* transition: transform 0.3s ease, border 0.3s ease; */
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+
+/* FLASHCARD HOVER: Title stays the same, Border Glows */
+#dynamic-services-container .accordion-item:hover {
+    transform: translateY(-5px);
+    border-color: var(--theme-color);
+    box-shadow: 0px 0px 20px var(--theme-color);
+}
+
+#dynamic-services-container .accordion-header {
+    pointer-events: none; /* Disable individual header hover colors */
+    border-bottom: 1px solid #0000000D; /* Subtle 5% black divider */
+}
+
+#dynamic-services-container .accordion-content {
+    max-height: none !important; 
+    display: flex;
+    padding: 20px;
+    text-align: center;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+}
