@@ -8,11 +8,22 @@
     font-family: 'Segoe UI', Roboto, sans-serif;
 }
 
+body {
+    margin: 0;
+    /* The first background is the tint (Master), the second is the Image */
+    background-image: 
+        linear-gradient(var(--body-tint), var(--body-tint)), 
+        var(--body--image);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-color: black; /* Fallback */
+}
+
 .top-section {
     position: relative;
     height: 22vh;
     background-color: transparent; !important;
-    background-image: linear-gradient(var(--header-tint), var(--header-tint)), var(--header-image); !important;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -21,6 +32,16 @@
     align-items: center;
     justify-content: center;
     z-index: 10;
+}
+
+.top-section.has-image {
+    /* Instead of a solid tint, we fade the header picture into transparency at the bottom */
+    background-image: 
+        linear-gradient(to bottom, var(--header-tint), transparent), 
+        var(--header-image) !important;
+    
+    background-size: cover;
+    background-position: center;
 }
 
 .top-section h1 {
