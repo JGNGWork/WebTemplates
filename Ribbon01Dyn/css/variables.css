@@ -1,7 +1,7 @@
 /**
  * UI Variables & Theme Fallbacks
  */
-:root {
+:root {/*** /
     --theme-color: #38bdf8;
     --body-bg: #000000;
     --footer-bg: #000000;
@@ -18,11 +18,11 @@
 
     --header-tint: #000000B3;
     --body-tint: #000000CC;
-
+/ ***/
     /* Images - Initializing as 'none' ensures JS can inject url() properly */
     --body-image: none;
     --header-image: none;
-}
+} /***/
 
 /**
  * UI Animations
