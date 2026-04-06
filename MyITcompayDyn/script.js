@@ -13,7 +13,9 @@ document.addEventListener('DOMContentLoaded', () => {
     function loadCompanyData(jsonFileUrl) {
         
         // Update title to show it's loading
-        document.getElementById('company-title').textContent = "Loading...";
+        // Find the title element once to reuse
+        const mainTitle = document.getElementById('company-title');
+        if (mainTitle) mainTitle.textContent = "Loading...";
         
         // Fetch the plain text JSON file and populate the website
         fetch(jsonFileUrl)
@@ -35,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.log("Header Title: ", data.header.companyName);
                 document.title = data.header.companyName;
                 // 3.2 Update all elements with id="company-title" (like <h1> or <h2>)
-                const titleElements = document.querySelectorAll('company-title');
+                const titleElements = document.querySelectorAll('#company-title');
                 titleElements.forEach(el => el.textContent = data.header.companyName);
 
                 //document.getElementById('company-title').textContent = data.header.companyName;
