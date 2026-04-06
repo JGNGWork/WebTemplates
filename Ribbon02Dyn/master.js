@@ -71,6 +71,13 @@ async function initWebsite() {
         root.style.setProperty('--body-tint',   theme.watermarkBody);
         root.style.setProperty('--body-image', `url('${theme.bodyImage}')`);
         root.style.setProperty('--header-image', `url('${theme.headerImage}')`);
+        
+        if (theme.bodyImage) {
+            document.body.style.backgroundImage = `url("${theme.bodyImage}")`;
+            document.body.style.backgroundAttachment = "fixed";
+            document.body.style.backgroundSize = "cover";
+            document.body.style.backgroundPosition = "center";
+        }
 
         // 3. Update Text Content
         // 3.1 Browser Tab Title
