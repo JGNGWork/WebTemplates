@@ -53,3 +53,6 @@
     color: var(--text-muted);
 }
 
+#dynamic-about-container {
+    padding: 20px;
+}
