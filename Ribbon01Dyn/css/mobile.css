@@ -14,7 +14,9 @@
         margin-top: -40px; /* Adjusted for mobile wave height */
         padding: 48px 20px 80px 20px;
     }
-
+    
+    #dynamic-services-container {
+        border: 1px solid #ffffff1a; /* Subtle white border */ }
     #dynamic-services-container .accordion-item { 
         flex: 0 0 200px;
         /* height: 280px; */
