@@ -8,17 +8,20 @@
     font-family: 'Segoe UI', Roboto, sans-serif;
 }
 
-
 .top-section {
     position: relative;
-    height: 22vh;
+    height: 32vh;
+    background-color: transparent;
+    background-image: linear-gradient(var(--header-tint), var(--header-tint)), var(--header-image); !important;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 10;
 }
-
 
 .top-section h1 {
     color: #ffffff;
@@ -55,55 +58,19 @@
 
 .body-section {
     position: relative;
+    /* Layer 1: Background Color (Fallback) */
+    background-color: var(--body-bg); 
+    /* Layer 2: Background Image (Injected via JS) */
+    background-image: linear-gradient(var(--body-tint), var(--body-tint)), var(--body-image); !important;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Parallax effect */
     color: var(--text-main);
     margin-top: -100px; 
     padding-top: 148px; /* Offsets the pull so content starts at the right place */
     padding: 148px 20px 120px 20px;
 }
-
-body {
-    margin: 0;
-    /* Layer 1: Background Color (Fallback) */
-    background-color: var(--body-bg); 
-    /* The first background is the tint (Master), the second is the Image */
-    background-image: 
-        linear-gradient(var(--body-tint), var(--body-tint)), 
-        var(--body--image); !important;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-}
-
-.top-section, .body-section {
-    /* Force these to be transparent so the body wallpaper shows through */
-    background-color: transparent !important;
-    background-image: none !important; 
-}
-
-/* If a Header Image IS provided, we re-enable it only for the header */
-.top-section.has-image {
-    background-image: 
-        linear-gradient(var(--header-tint), var(--header-tint)), 
-        var(--header-image) !important;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    
-}
-
-.body-section.has-image {
-    /* Layer 1: Background Color (Fallback) */
-    background-color: var(--body-bg); 
-    /* Layer 2: Background Image (Injected via JS) */
-    background-image: 
-        linear-gradient(var(--body-tint), var(--body-tint)), 
-        var(--body-image); !important;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed; /* Parallax effect */
-}
-
 
 .container {
     max-width: 800px;
