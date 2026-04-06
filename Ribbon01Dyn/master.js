@@ -62,9 +62,9 @@ async function initWebsite() {
         root.style.setProperty('--text-main', theme.textMain);
         root.style.setProperty('--text-muted', theme.textMuted);
         root.style.setProperty('--text-on-dark', theme.textOnDark);
-        root.style.setProperty('--text-shadow-E6', textShadowE6);
-        root.style.setProperty('--text-shadow-99', textShadow99);
-        root.style.setProperty('--text-shadow-99', textShadowCC);
+        root.style.setProperty('--text-shadow-E6', theme.textShadowE6);
+        root.style.setProperty('--text-shadow-99', theme.textShadow99);
+        root.style.setProperty('--text-shadow-CC', theme.textShadowCC);
         root.style.setProperty('--svg-shadow-color', theme.svgShadowColor);
         root.style.setProperty('--bd-shadow-color', theme.bdShadowColor);
         root.style.setProperty('--header-tint', theme.watermarkHeader);
