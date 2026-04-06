@@ -16,13 +16,13 @@
     flex-direction: row;
     flex-wrap: nowrap;
     overflow-x: auto;
-    gap: 30px;
+    gap: 20px;
     
     /* Styling for a "glass" look */
     background-color: var(--card-container-bg);
-    padding: 20px 10px 30px 10px;
+    padding: 10px 20px 10px 20px;
     border-radius: 15px;
-    border: 1px solid #ffffff1a; /* Subtle white border */
+    border: 12px solid #ffffff1a; /* Subtle white border */
     backdrop-filter: blur(15px); /* Frosty effect over the bodyImage */
     
     scroll-snap-type: x mandatory;
