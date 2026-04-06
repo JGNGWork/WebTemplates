@@ -21,7 +21,7 @@
         "bdShadowColor": "#38bdf840",
         "watermarkBody": "#000000DC",
         "watermarkHeader": "#000000D3",
-        "bodyImage": "../src/bodyBG.jpg",
+        "bodyImage": "src/bodyBG.jpg",
         "headerImage": ""
     }
 }
