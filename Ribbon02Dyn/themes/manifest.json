@@ -1,0 +1,9 @@
+{
+    "themes": [
+        { "id": "default", "label": "Default Dark" },
+        { "id": "MidnightBlue01", "label": "Midnight Corporate 01" },
+        { "id": "MidnightBlue02", "label": "Midnight Corporate 02" },
+        { "id": "AutumnTech01", "label": "Autumn Tech (Orange & Brown)" },
+        { "id": "EcoGreen01", "label": "Environmental Tech" }
+    ]
+}

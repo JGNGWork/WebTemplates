@@ -1,0 +1,45 @@
+{
+    "_commentServices": "--- THIS IS THE Services CONTENT SECTION ---",
+    "services": [
+        {
+            "categoryTitle": "Custom Software & IT Development ",
+            "items": [
+                "We build tailored digital solutions, apps, and systems that improve how your business operates."
+            ]
+        },
+        {
+            "categoryTitle": "Data Analytics & AI Automation",
+            "items": [
+                "We turn your business data into insights and automate processes using AI to save time and increase efficiency"
+            ]
+        },
+        {
+            "categoryTitle": "Web Design & Digital Platforms",
+            "items": [
+                "We design and develop modern, high-performing websites and digital platforms."
+            ]
+        },
+        {
+            "categoryTitle": "UX/UI Design",
+            "items": [
+                "We create intuitive, user-friendly digital experiences that improve customer engagement."
+            ]
+        },
+        {
+            "categoryTitle": "Media & Digital Content",
+            "items": [
+                "We produce and edit professional digital media for websites, marketing, and online platforms"
+            ]
+        }
+    ],
+    
+    "_commentAbout": "--- THIS IS THE About CONTENT SECTION ---",
+    "about": [
+        {
+            "categoryTitle": "ABOUT US",
+            "items": [
+                "We help businesses grow through technology by building custom software, analyzing data to generate insights, and implementing AI-powered automation to improve efficiency. Our team also creates intuitive user experiences (UX/UI) and professional digital media to ensure your products and services connect effectively with your customers."
+            ]
+        }
+    ]
+}

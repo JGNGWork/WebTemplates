@@ -1,0 +1,109 @@
+/**
+ * Base Layout & Typography
+ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+.top-section {
+    position: relative;
+    height: 32vh;
+    background-color: transparent;
+    background-image: linear-gradient(var(--header-tint), var(--header-tint)), var(--header-image); !important;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.top-section h1 {
+    color: #ffffff;
+    font-size: 4rem;
+    text-align: center;
+    padding: 0 20px 32px 20px;
+    /* Layered text shadows */
+    text-shadow: 
+        2px 2px 4px rgba(0, 0, 0, 0.9),
+        0px 0px 15px rgba(0, 0, 0, 0.6),
+        2px 2px 4px #000000E6,
+        0px 0px 15px #00000099,
+        -1px -1px 0 #000000,  
+         1px -1px 0 #000000,
+        -1px  1px 0 #000000,
+         1px  1px 0 #000000,
+        2px 2px 8px #000000E6, 
+        2px 2px 15px #000000CC,
+        2px 2px 25px #00000099;
+    text-shadow: 
+        2px 2px 4px rgba(0, 0, 0, 0.9),
+        0px 0px 15px rgba(0, 0, 0, 0.6),
+        2px 2px 4px var(--text-shadow-E6),
+        0px 0px 15px var(--text-shadow-99),
+        -1px -1px 0 var(--text-main),  
+         1px -1px 0 var(--text-main),
+        -1px  1px 0 var(--text-main),
+         1px  1px 0 var(--text-main),
+        2px 2px 8px var(--text-shadow-E6), 
+        2px 2px 15px var(--text-shadow-CC),
+        2px 2px 25px var(--text-shadow-99);
+    animation: fadeInUp 1.2s ease-out forwards;
+}
+
+.body-section {
+    position: relative;
+    /* Layer 1: Background Color (Fallback) */
+    background-color: var(--body-bg); 
+    /* Layer 2: Background Image (Injected via JS) */
+    background-image: linear-gradient(var(--body-tint), var(--body-tint)), var(--body-image); !important;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Parallax effect */
+    color: var(--text-main);
+    margin-top: -100px; 
+    padding-top: 148px; /* Offsets the pull so content starts at the right place */
+    padding: 148px 20px 120px 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.bottom-section {
+    background-color: var(--footer-bg);
+    color: var(--text-on-dark);
+    padding: 28px 20px 26px 20px;
+}
+
+.body-section .container {
+    max-width: 1200px; /* Increased from 800px */
+    width: 95%;        /* Ensures it doesn't touch the edges on mid-size screens */
+    margin: 0 auto;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.footer-container h2 { 
+    color: var(--theme-color); 
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    margin: 10px 0;
+    font-size: 1.1rem;
+}

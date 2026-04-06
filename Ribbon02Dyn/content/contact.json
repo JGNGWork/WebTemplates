@@ -1,0 +1,16 @@
+{
+    "_commentContact": "--- THIS IS THE Contact CONTENT SECTION ---",
+    "contact": {
+        "email": "servecies@servsit.com",
+        "phone": "+44 20 8989 5555",
+        "location": "Edinburgh, Scotland",
+        "bookingUrl": "#",
+        "social": {
+            "whatsapp": "+44 20 8989 5555",
+            "telegram": "+44 20 8989 5555",
+            "linkedin": "https://linkedin.com",
+            "github": "",
+            "twitter": "https://twitter.com"
+        }
+    }
+}
