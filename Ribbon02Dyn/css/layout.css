@@ -63,14 +63,15 @@
 
 body {
     margin: 0;
+    /* Layer 1: Background Color (Fallback) */
+    background-color: var(--body-bg); 
     /* The first background is the tint (Master), the second is the Image */
     background-image: 
         linear-gradient(var(--body-tint), var(--body-tint)), 
-        var(--body--image);
+        var(--body--image); !important;
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
-    background-color: black; /* Fallback */
 }
 
 .top-section, .body-section {
