@@ -32,6 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 root.style.setProperty('--header-image', `url('${data.theme.headerImage}')`);
                 
                 // 2. INJECT HEADER & CONTACT TEXT
+                console.log("Header Title: ", data.header.companyName);
                 document.title = data.header.companyName;
                 document.getElementById('company-title').textContent = data.header.companyName;
                 document.getElementById('contact-email').textContent = data.contact.email;
