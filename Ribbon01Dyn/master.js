@@ -50,6 +50,9 @@ async function initWebsite() {
         const theme = themeData.theme;
 
         // Mapping JSON keys to CSS Variables
+//console.log("Header tint:", theme.watermarkHeader);
+//console.log("Body Path:", theme.bodyImage);
+//console.log("Header Path:", theme.headerImage);
         root.style.setProperty('--theme-color', theme.primaryColor);
         root.style.setProperty('--body-bg', theme.bodyBackground);
         root.style.setProperty('--footer-bg', theme.footerBackground);
@@ -62,10 +65,7 @@ async function initWebsite() {
         root.style.setProperty('--svg-shadow-color', theme.svgShadowColor);
         root.style.setProperty('--bd-shadow-color', theme.bdShadowColor);
         root.style.setProperty('--header-tint', theme.watermarkHeader);
-        root.style.setProperty('--body-tint', theme.watermarkBody);
-console.log("Full Theme Object:", theme);
-console.log("Body Path:", theme.bodyImage);
-console.log("Header Path:", theme.headerImage);
+        root.style.setProperty('--body-tint',   theme.watermarkBody);
         root.style.setProperty('--body-image', `url('${theme.bodyImage}')`);
         root.style.setProperty('--header-image', `url('${theme.headerImage}')`);
 
