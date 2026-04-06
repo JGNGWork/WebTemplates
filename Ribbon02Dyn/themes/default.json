@@ -6,7 +6,7 @@
     "_commentTheme": "--- THIS IS THE Theme CONTENT SECTION ---",
     "theme": {
         "primaryColor": "#38bdf8",
-        "bodyBackground": "#000000",
+        "bodyBackground": "#00000000",
         "footerBackground": "#121212",
         "cardContainerBG": "#38bdf822",
         "cardBackground": "#1e293b99",

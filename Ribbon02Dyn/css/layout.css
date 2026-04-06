@@ -11,7 +11,7 @@
 .top-section {
     position: relative;
     height: 22vh;
-    background-color: transparent;
+    background-color: transparent; !important;
     background-image: linear-gradient(var(--header-tint), var(--header-tint)), var(--header-image); !important;
     background-position: center;
     background-size: cover;
