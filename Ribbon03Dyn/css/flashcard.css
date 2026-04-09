@@ -76,6 +76,7 @@
 }
 
 #dynamic-flashcard-container .accordion-header {
+    font-size: 1.2rem;
     background: var(--card-header-bg);
     padding: 15px;
     font-weight: bold;
@@ -102,7 +103,7 @@
 
 #dynamic-flashcard-container .accordion-content ul {
     list-style: none; /* We handle icons in the JSON or renderers */
-    padding: 0;
+    padding: 0 10;
     margin: 0;
     text-align: left;
 }
@@ -110,9 +111,8 @@
 #dynamic-flashcard-container .accordion-content li {
     font-size: 0.9rem;
     color: var(--text-muted);
-    margin-bottom: 8px;
-    line-height: 1;
-    margin-bottom: 6px; /* Reduced space between items */
+    margin-bottom: 2px;
+    line-height: 1.2;
     /* NEW: Force text wrapping */
     word-wrap: break-word;
     white-space: normal; 
