@@ -37,7 +37,7 @@
 
 .accordion-header.active {
     background-color: var(--card-container-bg); 
-    color: var(--text-on-dark);
+    color: var(--text-main);
 }
 
 /* Plus/Minus Icon Styling */
