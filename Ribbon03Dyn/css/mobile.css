@@ -4,7 +4,7 @@
 @media (max-width: 600px) {
     /* 1. Header & Title */
     .top-section { 
-        height: auto; 
+        height: 25vh; 
         min-height: 18vh; /* Gives room for title + yellow button */
         display: flex;
         flex-direction: column;

@@ -94,6 +94,10 @@
     flex-grow: 1;
     align-items: left;
     justify-content: center;
+    /* Prevent horizontal overflow */
+    overflow-x: hidden; 
+    width: 100%;
+    box-sizing: border-box;
 }
 
 #dynamic-flashcard-container .accordion-content ul {
@@ -107,7 +111,12 @@
     font-size: 0.9rem;
     color: var(--text-muted);
     margin-bottom: 8px;
-    line-height: 1.5;
+    line-height: 1;
+    margin-bottom: 6px; /* Reduced space between items */
+    /* NEW: Force text wrapping */
+    word-wrap: break-word;
+    white-space: normal; 
+    overflow-wrap: break-word;
 }
 
 /* Target the new classes from renderers.js */
