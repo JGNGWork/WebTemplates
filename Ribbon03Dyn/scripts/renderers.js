@@ -14,7 +14,8 @@ export function renderFlashcards(container, data) {
         // Map items and apply conditional formatting
         const itemsHtml = category.items.map((item, index) => {
             // First item is usually the 'Goal'
-            if (index === 0) {
+            if (index === 0) || item.toLowerCase().includes('goal')) 
+                             || item.toLowerCase().includes('flow')) {
                 return `<li class="card-goal"><strong>${item}</strong></li>`;
             }
             // Items with emojis or 'Business Impact' text get a special class

@@ -31,7 +31,7 @@
 }
 
 .accordion-header:hover, .accordion-header.active {
-    background-color: var(--theme-color); 
+    background-color: var(--card-container-bg); 
     color: white;
 }
 

@@ -57,7 +57,7 @@
 #dynamic-flashcard-container .accordion-item {
     flex: 0 0 20rem; /* 320px */ /* Desktop Width */
     background: var(--card-bg);
-    border-radius: irem; /* 15px */
+    border-radius: 1rem; /* 15px */
     border: 1px solid #ffffff1a;
     overflow: hidden; 
     scroll-snap-align: center;
@@ -94,13 +94,15 @@
 
 #dynamic-flashcard-container .accordion-content {
     max-height: none !important; 
-    display: flex;
-    flex-direction: column;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
     padding: 0 1rem 1rem 1rem;
     text-align: left;
     flex-grow: 1;
-    /* align-items: left;
-    justify-content: center; */
+    gap  0;
+    
     /* Prevent horizontal overflow */
     overflow-x: hidden; 
     width: 100%;
@@ -109,17 +111,19 @@
 
 #dynamic-flashcard-container .accordion-content ul {
     list-style: none; /* We handle icons in the JSON or renderers */
-    padding: 0;
-    margin: 0;
     display: flex;
     flex-direction: column;
-    height: 100%;
+    justify-content: flex-start !important;
+    height: 100% !important;
+    margin: 0;
+    padding: 0;
 }
 
 #dynamic-flashcard-container .accordion-content li {
     font-size: 0.9rem;
     color: var(--text-muted);
     line-height: 1.2;
+    flex-shrink: 0;
 
     /* Hanging indentation space */
     padding-left: 0.9rem;   /* Space for the bullet */
@@ -135,8 +139,10 @@
 .card-goal {
     color: var(--theme-color) !important;
     border-bottom: 1px solid var(--bd-shadow-color);
-    padding-bottom: 0.1rem;
-    margin-bottom: -0.6rem !important;
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+    padding-top: 0.8rem !important;
+    margin-top: 0 !important;
     font-weight: bold;
 
      /* Hanging indentation space */
@@ -146,8 +152,9 @@
 .card-list {
     display: flex;
     flex-direction: column;
-    height: 100%;
-    margin-bottom: -0.6rem;
+    height: auto;
+    margin-bottom: 0 !important;
+    margin-top: -0.4rem !important;
     padding: 0 0 0 1rem;
     list-style: none;
 }
@@ -157,10 +164,16 @@
     border-radius: 8px;
     color: var(--text-main) !important;
     font-weight: 600;
-    margin-top: auto + 1rem; /* Pushes to bottom */
-    padding: 0.8rem 0.8rem 0.8rem 3rem !important;
+    margin-top: auto; /* Pushes to bottom */
+    padding: 0.8rem !important;
     
     /* Hanging indentation space */
     padding-left: 2.2rem !important;   /* Space for the bullet */
     text-indent: -1.2rem !important;   /* Pull first line back */
+}
+
+/* Target the list specifically when it follows a goal */
+
+.card-goal + li {
+    margin-top: 0.5rem !important;
 }
