@@ -22,7 +22,7 @@ export function renderFlashcards(container, data) {
                 return `<li class="card-impact">${item}</li>`;
             }
             // Standard bullet points
-            return `<li>${item}</li>`;
+            return `<li class="card-list">${item}</li>`;
         }).join('');
         
         card.innerHTML = `

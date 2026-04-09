@@ -5,8 +5,8 @@
 .section-title {
     color: var(--theme-color);
     font-size: 2rem;
-    margin-top: -40px;
-    margin-bottom: 30px; /* Space between title and the blue container */
+    margin-top: -2.5rem; /* ~40px */
+    margin-bottom: 2rem; /* Space between title and the blue container */
     text-align: center;
     width: 100%;
     font-weight: 800;
@@ -32,12 +32,12 @@
     flex-direction: row;
     flex-wrap: nowrap;
     overflow-x: auto;
-    gap: 20px;
+    gap: 1.25rem; /* 20px */
     
     /* Styling for a "glass" look */
     background-color: var(--card-container-bg);
-    padding: 20px 20px 20px 20px;
-    border-radius: 15px;
+    padding: 1.25rem;
+    border-radius: 1rem;
     border: 2px solid #ffffff1a; /* Subtle white border */
     backdrop-filter: blur(15px); /* Frosty effect over the bodyImage */
     
@@ -55,9 +55,9 @@
 
 /* Individual Card Styling */
 #dynamic-flashcard-container .accordion-item {
-    flex: 0 0 320px; /* Desktop Width */
+    flex: 0 0 20rem; /* 320px */ /* Desktop Width */
     background: var(--card-bg);
-    border-radius: 15px;
+    border-radius: irem; /* 15px */
     border: 1px solid #ffffff1a;
     overflow: hidden; 
     scroll-snap-align: center;
@@ -70,31 +70,37 @@
 
 /* FLASHCARD HOVER: Title stays the same, Border Glows */
 #dynamic-flashcard-container .accordion-item:hover {
-    transform: translateY(-5px);
+    transform: translateY(-0.3rem); /* -5px */
     border-color: var(--theme-color);
     box-shadow: 0px 10px 20px var(--theme-color);
 }
 
 #dynamic-flashcard-container .accordion-header {
-    font-size: 1.2rem;
     background: var(--card-header-bg);
-    padding: 15px;
+    min-height: 80px;
+    font-size: 1.0rem;
     font-weight: bold;
     color: var(--text-main);
-    text-align: center;
+    padding: 1rem;
+    text-align: left;
     pointer-events: none; /* Disable individual header hover colors */
     border-bottom: 1px solid #0000000D; /* Subtle 5% black divider */
+    
+    /* Hanging indentation space */
+    padding-left: 2.5rem;   /* Space for the bullet */
+    text-indent: -1.5rem;   /* Pull first line back */
+
 }
 
 #dynamic-flashcard-container .accordion-content {
     max-height: none !important; 
     display: flex;
-    flex-direction: column
-    padding: 10px;
+    flex-direction: column;
+    padding: 0 1rem 1rem 1rem;
     text-align: left;
     flex-grow: 1;
-    align-items: left;
-    justify-content: center;
+    /* align-items: left;
+    justify-content: center; */
     /* Prevent horizontal overflow */
     overflow-x: hidden; 
     width: 100%;
@@ -103,17 +109,23 @@
 
 #dynamic-flashcard-container .accordion-content ul {
     list-style: none; /* We handle icons in the JSON or renderers */
-    padding: 0 10;
+    padding: 0;
     margin: 0;
-    text-align: left;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 #dynamic-flashcard-container .accordion-content li {
     font-size: 0.9rem;
     color: var(--text-muted);
-    margin-bottom: 2px;
     line-height: 1.2;
-    /* NEW: Force text wrapping */
+
+    /* Hanging indentation space */
+    padding-left: 0.9rem;   /* Space for the bullet */
+    text-indent: -0.9rem;   /* Pull first line back */
+
+    /* Force text wrapping */
     word-wrap: break-word;
     white-space: normal; 
     overflow-wrap: break-word;
@@ -123,25 +135,32 @@
 .card-goal {
     color: var(--theme-color) !important;
     border-bottom: 1px solid var(--bd-shadow-color);
-    padding-bottom: 10px;
-    margin-bottom: 15px !important;
+    padding-bottom: 0.1rem;
+    margin-bottom: -0.6rem !important;
     font-weight: bold;
+
+     /* Hanging indentation space */
+    padding-left: 2.6rem !important; /* Space for the bullet */
+    text-indent: -2.6rem !important; /* Pull first line back */
 }
 .card-list {
     display: flex;
     flex-direction: column;
     height: 100%;
-    margin: 0;
-    padding: 0;
+    margin-bottom: -0.6rem;
+    padding: 0 0 0 1rem;
     list-style: none;
 }
 
 .card-impact {
-    background: #ffffff1a;
-    padding: 10px;
+    background: #ffffff0a;
     border-radius: 8px;
     color: var(--text-main) !important;
     font-weight: 600;
-    /* Pushes the impact box to the very bottom of the card */
-    margin-top: auto; 
+    margin-top: auto + 1rem; /* Pushes to bottom */
+    padding: 0.8rem 0.8rem 0.8rem 3rem !important;
+    
+    /* Hanging indentation space */
+    padding-left: 2.2rem !important;   /* Space for the bullet */
+    text-indent: -1.2rem !important;   /* Pull first line back */
 }
