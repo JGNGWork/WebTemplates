@@ -15,11 +15,19 @@
         padding: 48px 20px 80px 20px;
     }
 
-    #dynamic-services-container {
+    #dynamic-flashcard-container {
         border: 1px solid #ffffff1a; /* Subtle white border */ }
-    #dynamic-services-container .accordion-item { 
+    #dynamic-flashcard-container .accordion-item { 
         flex: 0 0 220px;
-        /* height: 280px; */
+        min-height: 280px;
+    }
+    #dynamic-flashcard-container .accordion-header {
+        font-size: 0.8rem;
+        padding: 10px 5px;
+    }
+    #dynamic-flashcard-container .accordion-content li {
+        font-size: 0.7rem;
+        margin-bottom: 5px;
     }
     
     .footer-container {

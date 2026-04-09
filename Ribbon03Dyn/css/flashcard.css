@@ -5,10 +5,11 @@
 .section-title {
     color: var(--theme-color);
     font-size: 2rem;
+    margin-top: -40px;
     margin-bottom: 30px; /* Space between title and the blue container */
-    padding: -40px 20px 20px 20px;
     text-align: center;
     width: 100%;
+    font-weight: 800;
     /* Layered text shadows */
     text-shadow: 
         2px 2px 4px rgba(0, 0, 0, 0.9),
@@ -25,7 +26,8 @@
 }
 
 /* FLASHCARD SLIDER MODIFIER */
-#dynamic-services-container {
+/* #dynamic-services-container */
+#dynamic-flashcard-container {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -47,40 +49,79 @@
     -ms-overflow-style: none;  /* IE/Edge */
 }
 
-#dynamic-services-container::-webkit-scrollbar {
+#dynamic-flashcard-container::-webkit-scrollbar {
     display: none; /* Chrome, Safari, Opera */
 }
 
-#dynamic-services-container .accordion-item {
-    flex: 0 0 280px; 
-    /* height: 320px; */  
-    margin-bottom: 0; 
+/* Individual Card Styling */
+#dynamic-flashcard-container .accordion-item {
+    flex: 0 0 320px; /* Desktop Width */
+    background: var(--card-bg);
+    border-radius: 15px;
+    border: 1px solid #ffffff1a;
+    overflow: hidden; 
     scroll-snap-align: center;
     display: flex;
     flex-direction: column;
     /* transition: transform 0.3s ease, border 0.3s ease; */
-    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;;
 }
 
 
 /* FLASHCARD HOVER: Title stays the same, Border Glows */
-#dynamic-services-container .accordion-item:hover {
+#dynamic-flashcard-container .accordion-item:hover {
     transform: translateY(-5px);
     border-color: var(--theme-color);
-    box-shadow: 0px 0px 20px var(--theme-color);
+    box-shadow: 0px 10px 20px var(--theme-color);
 }
 
-#dynamic-services-container .accordion-header {
+#dynamic-flashcard-container .accordion-header {
+    background: var(--card-header-bg);
+    padding: 15px;
+    font-weight: bold;
+    color: var(--text-main);
+    text-align: center;
     pointer-events: none; /* Disable individual header hover colors */
     border-bottom: 1px solid #0000000D; /* Subtle 5% black divider */
 }
 
-#dynamic-services-container .accordion-content {
+#dynamic-card-container .accordion-content {
     max-height: none !important; 
     display: flex;
     padding: 10px;
-    text-align: center;
+    text-align: left;
     flex-grow: 1;
-    align-items: center;
+    align-items: left;
     justify-content: center;
+}
+
+#dynamic-flashcard-container .accordion-content ul {
+    list-style: none; /* We handle icons in the JSON or renderers */
+    padding: 0;
+    margin: 0;
+    text-align: left; /* Changed from center for better readability of lists */
+}
+
+#dynamic-flashcard-container .accordion-content li {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+/* Target the new classes from renderers.js */
+.card-goal {
+    color: var(--theme-color) !important;
+    border-bottom: 1px solid var(--bd-shadow-color);
+    padding-bottom: 10px;
+    margin-bottom: 15px !important;
+}
+
+.card-impact {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 10px;
+    border-radius: 8px;
+    color: var(--text-main) !important;
+    font-weight: 600;
+    margin-top: 15px !important;
 }

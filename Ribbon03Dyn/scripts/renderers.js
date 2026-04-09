@@ -46,12 +46,20 @@ export function renderAccordion(container, data) {
         
         const btn = document.createElement('button');
         btn.className = 'accordion-header';
-        btn.innerHTML = `${section.categoryTitle} <span class="icon">+</span>`;
+        //btn.innerHTML = `${section.categoryTitle} <span class="icon">+</span>`;
+        // Clean up: If category title is "ABOUT US", we might want to style it differently
+        btn.innerHTML = `<span>${section.categoryTitle}</span> <span class="icon">+</span>`;
 
         const contentDiv = document.createElement('div');
         contentDiv.className = 'accordion-content';
         
-        contentDiv.innerHTML = `<ul>${section.items.map(i => `<li>${i}</li>`).join('')}</ul>`;
+        // For the About section, we might prefer a paragraph instead of a list if there's only one item
+        const contentBody = section.items.length === 1 
+            ? `<p class="about-text">${section.items[0]}</p>`
+            : `<ul>${section.items.map(i => `<li>${i}</li>`).join('')}</ul>`;
+        
+        //contentDiv.innerHTML = `<ul>${section.items.map(i => `<li>${i}</li>`).join('')}</ul>`;    
+        contentDiv.innerHTML = contentBody;
 
         itemDiv.appendChild(btn);
         itemDiv.appendChild(contentDiv);
