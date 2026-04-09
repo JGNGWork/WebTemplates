@@ -85,9 +85,10 @@
     border-bottom: 1px solid #0000000D; /* Subtle 5% black divider */
 }
 
-#dynamic-card-container .accordion-content {
+#dynamic-flashcard-container .accordion-content {
     max-height: none !important; 
     display: flex;
+    flex-direction: column
     padding: 10px;
     text-align: left;
     flex-grow: 1;
@@ -99,7 +100,7 @@
     list-style: none; /* We handle icons in the JSON or renderers */
     padding: 0;
     margin: 0;
-    text-align: left; /* Changed from center for better readability of lists */
+    text-align: left;
 }
 
 #dynamic-flashcard-container .accordion-content li {
@@ -115,13 +116,15 @@
     border-bottom: 1px solid var(--bd-shadow-color);
     padding-bottom: 10px;
     margin-bottom: 15px !important;
+    font-weight: bold;
 }
 
 .card-impact {
-    background: rgba(255, 255, 255, 0.05);
+    background: #ffffff1a;
     padding: 10px;
     border-radius: 8px;
     color: var(--text-main) !important;
     font-weight: 600;
-    margin-top: 15px !important;
+    /* Pushes the impact box to the very bottom of the card */
+    margin-top: auto; 
 }
