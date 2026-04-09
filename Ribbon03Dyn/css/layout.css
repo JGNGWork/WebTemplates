@@ -14,19 +14,27 @@
     height: 22vh;
     padding: 0 20px 32px 20px;
     display: flex;
-    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
-    display: flex;
+    align-items: center;
+    gap: 0;
     width: 100%;
     z-index: 10;
+    
+    /* Force text wrapping */
+    word-wrap: nowrap;
+    white-space: nowrap; 
+    overflow-wrap: nowrap;
 }
-
 
 .top-section h1 {
     color: #ffffff;
     font-size: 4rem;
     text-align: center;
     margin-left: 6rem;
+    margin-right: 6rem;
+    flex-shrink: 0;
     
     /* Layered text shadows */
     text-shadow: 
@@ -55,6 +63,7 @@
         2px 2px 25px var(--text-shadow-99);
     animation: fadeInUp 1.2s ease-out forwards;
 }
+
 
 .body-section {
     position: relative;

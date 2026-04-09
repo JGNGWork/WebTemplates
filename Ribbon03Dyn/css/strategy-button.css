@@ -8,6 +8,7 @@
 .cta-container {
     margin-top: 20px;
     display: flex;
+    flex-shrink: 0;
     justify-content: center; /* Centers the button horizontally */
     position: relative;
     z-index: 20;            /* Keeps button above wave masks and ribbons */
@@ -16,6 +17,7 @@
 .top-section  .cta-container {
     margin-top: -0.1rem;
     margin-left: auto;
+    margin-right: auto;
 }
 
 /* 2. Base Button Styles 

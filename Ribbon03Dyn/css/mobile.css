@@ -5,37 +5,46 @@
     /* 1. Header & Title */
     .top-section { 
         height: 25vh; 
-        min-height: 18vh; /* Gives room for title + yellow button */
+        min-height: 18vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding-top: 0;
+        margin: 0;
     }
     .top-section h1 { 
-        font-size: 1.8rem; 
-        padding: 20px 20px 12px 20px;
-        margin-top: 48%;
-        margin-bottom: 56%;
+        font-size: 4rem; 
+        padding: 0 1rem 1rem 1rem;
+        margin: 0;
+        text-align: center;
     }
 
     /* 2. Strategy Button (CTA) */
     .cta-container {
-        margin-top: 15px;
-        margin-bottom: 20px;
+        margin-top: 1rem; /* 15px; */
+        margin-bottom: 1.5rem; /* 20px; */
+    }
+    .top-section  .cta-container {
+        margin: 0;
+        align-items: center;
     }
 
     /* 3. The Wave & Body Transition */
+    .wave-bottom { margin-bottom: -1px; }
     .wave-bottom svg { height: 20px; }
 
     .body-section { 
         margin-top: -40px; /* Adjusted for mobile wave height */
-        padding: 48px 20px 80px 20px;
+        /* Converted padding to rem (~48px 20px 80px 20px) */
+        padding: 3rem 1.25rem 5rem 1.25rem; 
         background-color: transparent !important;
     }
 
+    /* 4. Flashcards */
     #dynamic-flashcard-container {
-        padding: 15px 10px;
-        gap: 15px;
+        padding: 1rem 0.6rem;
+        gap: 1rem;
     }
     #dynamic-flashcard-container .accordion-item { 
         flex: 0 0 220px;
@@ -43,15 +52,28 @@
     }
     #dynamic-flashcard-container .accordion-header {
         font-size: 0.75rem;
-        padding: 8px 4px;
+        padding: 0.75rem 0.5rem;
+    }
+    
+    /* 5. Indentation Overrides for 220px */
+    .card-goal {
+        padding-left: 2.2rem !important;
+        text-indent: -2.2rem !important;
+        font-size: 0.75rem;
     }
     #dynamic-flashcard-container .accordion-content li {
         font-size: 0.65rem;
         margin-bottom: 1px;
         line-height: 1.2;
     }
+    .card-impact {
+        font-size: 0.7rem;
+        padding: 0.6rem !important;
+        padding-left: 1.8rem !important;
+        text-indent: -1.2rem !important;
+    }
 
-    /* 5. Footer Transition */
+    /* 6. Footer Transition */
     .footer-container {
         flex-direction: column;
         align-items: center;    
