@@ -22,7 +22,7 @@ async function initWebsite() {
     
     // UI Elements
     const titleElements = document.querySelectorAll('#company-title');
-    const servicesContainer = document.getElementById('dynamic-services-container');
+    const servicesContainer = document.getElementById('dynamic-flashcard-container');
     const aboutContainer = document.getElementById('dynamic-about-container');
     const socialContainer = document.getElementById('dynamic-social-links');
 
@@ -136,7 +136,7 @@ async function initWebsite() {
         
         // 6. Scroll Dots for FlashCards
         const services = bodyData.services;
-        const container = document.getElementById('dynamic-services-container');
+        const container = document.getElementById('dynamic-flashcard-container');
         const dotsContainer = document.getElementById('scroll-dots');
 
         // 6.1. Calculate how many dots we actually need
