@@ -13,6 +13,11 @@
     z-index: 20;            /* Keeps button above wave masks and ribbons */
 }
 
+.top-section  .cta-container {
+    margin-top: -0.1rem;
+    margin-left: auto;
+}
+
 /* 2. Base Button Styles 
    The "Pill" shape and initial shadow depth. */
 .btn-strategy {
@@ -38,7 +43,7 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     
-    background-color: var(--theme-color);
+    background-color: var(--btn-strategy-bg);
     box-shadow: 0 0 20px 5px var(--bd-shadow-color);
 }
 

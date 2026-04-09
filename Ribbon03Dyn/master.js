@@ -65,6 +65,7 @@ async function initWebsite() {
         root.style.setProperty('--text-shadow-E6', theme.textShadowE6);
         root.style.setProperty('--text-shadow-99', theme.textShadow99);
         root.style.setProperty('--text-shadow-CC', theme.textShadowCC);
+        root.style.setProperty('--btn-strategy-bg', theme.btnStrategyBG);
         root.style.setProperty('--svg-shadow-color', theme.svgShadowColor);
         root.style.setProperty('--bd-shadow-color', theme.bdShadowColor);
         root.style.setProperty('--header-tint', theme.watermarkHeader);

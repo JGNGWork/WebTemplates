@@ -19,6 +19,7 @@
         "textShadowCC": "#ea580cCC",
         "svgShadowColor": "#ea580c99",
         "bdShadowColor": "#ea580c40",
+        "btnStrategyBG": "#ea580c",
         "watermarkBody": "#fff7ed00",
         "watermarkHeader": "#fff7ed00",
         "bodyImage": "",

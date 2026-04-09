@@ -4,8 +4,8 @@
 
 /* BASE ACCORDION ITEM */
 .accordion-item {
-    margin-bottom: 0px;
-    border-radius: 8px;
+    margin-bottom: 0;
+    border-radius: 0.75rem;
     box-shadow: 0 4px 15px var(--bd-shadow-color);
     overflow: hidden;
     background-color: var(--card-bg);
@@ -17,7 +17,7 @@
     width: 100%;
     background-color: var(--card-header-bg);
     color: var(--text-main);
-    padding: 20px;
+    padding: 1.25rem; /* 20px; */
     font-size: 1.2rem;
     font-weight: bold;
     border: none;
@@ -30,29 +30,59 @@
     transition: background-color 0.3s ease;
 }
 
-.accordion-header:hover, .accordion-header.active {
+.accordion-header:hover {
+    background-color: var(--theme-color); 
+    color: var(--text-on-dark);
+}
+
+.accordion-header.active {
     background-color: var(--card-container-bg); 
-    color: white;
+    color: var(--text-on-dark);
+}
+
+/* Plus/Minus Icon Styling */
+.accordion-header .icon {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.accordion-header.active .icon {
+    transform: rotate(180deg);
 }
 
 .accordion-content {
     background-color: var(--card-bg);
     max-height: 0; 
     overflow: hidden;
-    transition: max-height 0.4s ease-out;
+    transition: max-height 0.4s ease-out, padding 0.4s ease;
+}
+
+.about-text {
+    padding: 1.25rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin: 0;
 }
 
 .accordion-content ul {
     list-style-type: none;
-    padding: 20px;
+    padding: 1.25; /*  20px; */
+    margin: 0;
 }
 
 .accordion-content li {
-    padding: 10px 0;
+    padding: 0.75px 0;
     border-bottom: 1px solid #0000000D; /* Subtle 5% black divider */
     color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.accordion-content li:last-child {
+    border-bottom: none;
 }
 
 #dynamic-about-container {
-    margin-top: 20px;
+    margin-top: 3rem;
+    padding-bottom: 2rem;
 }
