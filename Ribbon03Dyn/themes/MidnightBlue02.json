@@ -1,0 +1,27 @@
+{
+    "metadata": {
+        "date": "..."
+    },
+    
+    "_commentTheme": "--- MIDNIGHT CORPORATE THEME ---",
+    "theme": {
+        "primaryColor": "#38bdf8",
+        "bodyBackground": "#0f172a",
+        "footerBackground": "#020617",
+        "cardContainerBG": "#38bdf822",
+        "cardBackground": "#1e293b99",
+        "cardHeaderBackground": "#33415599",
+        "textMain": "#f8fafc",
+        "textMuted": "#94a3b8",
+        "textOnDark": "#f8fafc",
+        "textShadowE6": "#38bdf8E6",
+        "textShadow99": "#38bdf899",
+        "textShadowCC": "#38bdf8CC",
+        "svgShadowColor": "#38bdf899",
+        "bdShadowColor": "#38bdf840",
+        "watermarkBody": "#0f172aEC",
+        "watermarkHeader": "#0f172aD3",
+        "bodyImage": "src/bodyBG.jpg",
+        "headerImage": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1600"
+    }
+}

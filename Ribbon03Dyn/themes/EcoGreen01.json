@@ -1,0 +1,27 @@
+{
+    "metadata": {
+        "date": "..."
+    },
+    
+    "_commentTheme": "--- ENVIRONMENTAL TECH THEME ---",
+    "theme": {
+        "primaryColor": "#22c55e",
+        "bodyBackground": "#f0fdf4",
+        "footerBackground": "#14532d",
+        "cardContainerBG": "#22c55e22",
+        "cardBackground": "#ffffff99",
+        "cardHeaderBackground": "#dcfce799",
+        "textMain": "#166534",
+        "textMuted": "#15803d",
+        "textOnDark": "#f0fdf4",
+        "textShadowE6": "#22c55eE6",
+        "textShadow99": "#22c55e99",
+        "textShadowCC": "#22c55eCC",
+        "svgShadowColor": "#22c55e99",
+        "bdShadowColor": "#22c55e40",
+        "watermarkBody": "#f0fdf400",
+        "watermarkHeader": "#f0fdf400",
+        "bodyImage": "",
+        "headerImage": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1600"
+    }
+}

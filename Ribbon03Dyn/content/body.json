@@ -1,0 +1,87 @@
+{
+    "_commentServices": "--- THIS IS THE Services CONTENT SECTION ---",
+    "services": [
+        {
+            "categoryTitle": "🔵 Revenue Growth & Sales Acceleration (Front-End)",
+            "items": [
+                "Goal: Increase sales, conversions, and customer value"
+                , "  •  Website & e-commerce development focused on conversion and revenue"
+                , "  •  Conversion Rate Optimization (CRO) to turn more visitors into buyers"
+                , "  •  Paid ads creatives to maximize ROI and reduce acquisition costs"
+                , "  •  Email marketing systems to increase repeat purchases"
+                , "  •  Marketing analytics dashboards to track and scale what works"
+                , "👉 Business Impact: More sales from the same traffic + higher return on every marketing dollar."
+            ]
+        },
+        {
+            "categoryTitle": "🟢 Cost Reduction & Business Automation (Back-End)",
+            "items": [
+                "Goal: Reduce costs and improve operational efficiency."
+                , "  •  Automate repetitive tasks to cut manual workload and staffing costs"
+                , "  •  CRM setup to increase sales team productivity and close rates"
+                , "  •  System integrations to eliminate inefficiencies"
+                , "  •  Internal tools to streamline operations"
+                , "  •  Data cleaning automation to save time and improve accuracy"
+                , "👉 Business Impact: Lower operating costs + faster processes + higher margins."
+            ]
+        },
+        {
+            "categoryTitle": "🟣 Data, Analytics & AI Intelligence",
+            "items": [
+                "Goal: Make smarter decisions and predict growth."
+                , "  •  Real-time dashboards to track revenue, costs, and KPIs"
+                , "  •  Sales & marketing analytics to identify profit drivers"
+                , "  •  Predictive models to forecast demand and performance"
+                , "  •  Data audits to find inefficiencies and opportunities"
+                , "  •  Team training to turn data into action"
+                , "👉 Business Impact: Better decisions + predictable growth + reduced risk."
+            ]
+        },
+        {
+            "categoryTitle": "🟠 Digital Products & Scalable Platforms",
+            "items": [
+                "Goal: Build assets that generate long-term revenue."
+                , "  •  Custom software to create scalable business models"
+                , "  •  Mobile apps to increase engagement and retention"
+                , "  •  Cloud infrastructure to support growth without bottlenecks"
+                , "  •  UX/UI design to maximize user engagement and conversions"
+                , "👉 Business Impact: Scalable digital assets that continuously generate revenue."
+            ]
+        },
+        {
+            "categoryTitle": "🔴 Content, Ads & Customer Acquisition Engine",
+            "items": [
+                "Goal: Generate consistent leads and sales."
+                , "  •  Social media content to attract and convert audiences"
+                , "  •  Short-form video to drive engagement and reach"
+                , "  •  Paid ads creatives focused on ROI"
+                , "  •  Copywriting that turns attention into revenue"
+                , "  •  AI-generated content to scale output efficiently"
+                , "  •  Content strategy aligned with growth goals"
+                , "👉 Business Impact: More leads + lower acquisition costs + consistent revenue growth."
+            ]
+        }
+        {
+            "categoryTitle": "How we SERVS-IT:",
+            "items": [
+                "A Complete Revenue & Profit System"
+                , "Flow"
+                , "  1.  Traffic & Content → brings users in"
+                , "  2.  Front-End Experience → converts users into customers"
+                , "  3.  Back-End Systems → fulfil, automate, and optimise operations"
+                , "  4.  Data & AI → track, improve, and scale everything."
+                , "Every layer is engineered to increase revenue and reduce costs simultaneously"
+            ]
+        }
+    ],
+    
+    "_commentAbout": "--- THIS IS THE About CONTENT SECTION ---",
+    "about": [
+        {
+            "categoryTitle": "ABOUT US",
+            "items": [
+                "We help businesses grow through technology by building custom software, analyzing data to generate insights, and implementing AI-powered automation to improve efficiency. Our team also creates intuitive user experiences (UX/UI) and professional digital media to ensure your products and services connect effectively with your customers."
+            ]
+        }
+    ]
+}

@@ -1,0 +1,27 @@
+{
+    "metadata": {
+        "activeThemeSource": "MidnightBlue01"
+    },
+    
+    "_commentTheme": "--- THIS IS THE Theme CONTENT SECTION ---",
+    "theme": {
+        "primaryColor": "#38bdf8",
+        "bodyBackground": "#00000000",
+        "footerBackground": "#121212",
+        "cardContainerBG": "#38bdf822",
+        "cardBackground": "#1e293b99",
+        "cardHeaderBackground": "#33415599",
+        "textMain": "#f8fafc",
+        "textMuted": "#94a3b8",
+        "textOnDark": "#f8fafc",
+        "textShadowE6": "#38bdf8E6",
+        "textShadow99": "#38bdf899",
+        "textShadowCC": "#38bdf8CC",
+        "svgShadowColor": "#38bdf899",
+        "bdShadowColor": "#38bdf840",
+        "watermarkBody": "#000000DC",
+        "watermarkHeader": "#000000D3",
+        "bodyImage": "src/bodyBG.jpg",
+        "headerImage": ""
+    }
+}
