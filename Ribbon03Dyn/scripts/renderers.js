@@ -78,6 +78,7 @@ export function renderAccordion(container, data) {
                 content.style.maxHeight = null;
                 content.style.paddingBottom = "0";
             } else {
+                // scrollHeight ensures the accordion opens exactly to its content height
                 content.style.maxHeight = content.scrollHeight + "px";
                 content.style.paddingBottom = "20px";
             }

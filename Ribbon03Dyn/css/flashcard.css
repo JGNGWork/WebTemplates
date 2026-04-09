@@ -118,6 +118,14 @@
     margin-bottom: 15px !important;
     font-weight: bold;
 }
+.card-list {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
 
 .card-impact {
     background: #ffffff1a;
