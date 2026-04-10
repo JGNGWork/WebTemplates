@@ -2,7 +2,7 @@
 /*  MOBILE RESPONSIVENESS  */
 /***************************/
 @media (max-width: 600px) {
-    /* 1. Header & Title */
+    /* 1. Header & Title & Logo */
     .top-section { 
         height: 25vh; 
         min-height: 18vh;
@@ -18,6 +18,15 @@
         padding: 0 1rem 1rem 1rem;
         margin: 0;
         text-align: center;
+    }
+    .company-logo {
+        max-height: 45px;
+        margin: 4rem;
+    }
+    .top-section  #logo-container {
+        margin: 4rem;
+        padding: 0 1rem 1rem 1rem;
+        align-items: center;
     }
 
     /* 2. Strategy Button (CTA) */

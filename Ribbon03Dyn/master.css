@@ -25,3 +25,21 @@
     background: var(--theme-color);
     border-radius: 10px;
 }
+
+.company-logo {
+    max-height: 140px; /* Adjust based on your header height */
+    width: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+/* Ensure the container behaves well with the CTA button */
+#logo-container {
+    display: flex;
+    margin-left: 6rem;
+    margin-right: 6rem;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    min-height: 80px;
+}

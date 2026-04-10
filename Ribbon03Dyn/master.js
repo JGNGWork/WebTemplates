@@ -21,6 +21,7 @@ async function initWebsite() {
     };
     
     // UI Elements
+    const logoContainer = document.getElementById('logo-container');
     const titleElements = document.querySelectorAll('#company-title');
     const servicesContainer = document.getElementById('dynamic-flashcard-container');
     const aboutContainer = document.getElementById('dynamic-about-container');
@@ -96,20 +97,35 @@ async function initWebsite() {
 
         // 3. Update Text Content
         // 3.1 Browser Tab Title
-        document.title = headerData.header.companyName;
+        const companyName = headerData.header.companyName;
+        const logoPath = headerData.header.companyLogo;
+        
+        // Browser Tab Title
+        document.title = companyName;
 
-        // 3.2 Update all elements with id="company-title" (like <h1> or <h2>)
-        titleElements.forEach(el => el.textContent = headerData.header.companyName);
+        if (logoContainer) {
+            if (logoPath && logoPath !== "" && logoPath !== "none") {
+                // Show Logo Image
+                logoContainer.innerHTML = `<img src="${logoPath}" alt="${companyName}" class="company-logo">`;
+            } else {
+                // Show Text Fallback
+                logoContainer.innerHTML = `<h1 id="company-title">${companyName}</h1>`;
+            }
+        } else {
+            // Fallback for current titleElements if logo-container doesn't exist
+            // Update all elements with id="company-title" (like <h1> or <h2>)
+            titleElements.forEach(el => el.textContent = companyName);
+        }
         
         // 3.3 Update Contact Info
         document.getElementById('contact-email').textContent = contactData.contact.email;
         document.getElementById('contact-phone').textContent = contactData.contact.phone;
         document.getElementById('contact-location').textContent = contactData.contact.location;
         
-        // NEW: Update the Booking Button URL
-        const bookingBtn = document.getElementById('booking-link');
-        if (bookingBtn && contactData.contact.bookingUrl) {
-            bookingBtn.href = contactData.contact.bookingUrl;
+        // Update all the Booking links (using class for safety)
+        const bookingLinks = document.querySelectorAll('.btn-strategy');
+        if (contactData.contact.bookingUrl) {
+            bookingLinks.forEach(link => link.href = contactData.contact.bookingUrl);
         }
 
         // 4. Render UI Sections
@@ -137,46 +153,51 @@ async function initWebsite() {
         
         // 6. Scroll Dots for FlashCards
         const services = bodyData.services;
-        const container = document.getElementById('dynamic-flashcard-container');
-        const dotsContainer = document.getElementById('scroll-dots');
-
-        // 6.1. Calculate how many dots we actually need
-        function updateDots() {
-            dotsContainer.innerHTML = ''; // Clear old dots
+        if (servicesContainer && bodyData.services) {
+            const dotsContainer = document.getElementById('scroll-dots');
+    
+            // 6.1. Calculate how many dots we actually need
+            function updateDots() {
+                dotsContainer.innerHTML = ''; // Clear old dots
+                
+                const firstCard = servicesContainer.querySelector('.accordion-item');
+                if (!firstCard) return;
+                
+                const cardWidth = firstCard.offsetWidth + 20; // width + gap
+                const visibleCards = Math.floor(servicesContainer.offsetWidth / cardWidth);
+                const totalDots = Math.max(1, bodyData.services.length - visibleCards + 1);
             
-            const cardWidth = container.querySelector('.accordion-item').offsetWidth + 20; // width + gap
-            const visibleCards = Math.floor(container.offsetWidth / cardWidth);
-            const totalDots = Math.max(1, services.length - visibleCards + 1);
-        
-            for (let i = 0; i < totalDots; i++) {
-                const dot = document.createElement('div');
-                dot.className = i === 0 ? 'dot active' : 'dot';
-                dotsContainer.appendChild(dot);
+                for (let i = 0; i < totalDots; i++) {
+                    const dot = document.createElement('div');
+                    dot.className = i === 0 ? 'dot active' : 'dot';
+                    dotsContainer.appendChild(dot);
+                }
             }
-        }
-
-        // 6.2. Update active dot based on percentage of scroll
-        const resizeObserver = new ResizeObserver(() => {
-            updateDots();
-        });
-        resizeObserver.observe(container);
-        
-        container.addEventListener('scroll', () => {
-            const dots = dotsContainer.querySelectorAll('.dot');
-            if (dots.length === 0) return;
-        
-            const maxScroll = container.scrollWidth - container.offsetWidth;
-            const scrollPercentage = container.scrollLeft / maxScroll;
-            const activeIndex = Math.min(
-                dots.length - 1,
-                Math.floor(scrollPercentage * dots.length + 0.5)
-            );
-        
-            dots.forEach((dot, i) => {
-                dot.classList.toggle('active', i === activeIndex);
+    
+            // 6.2. Update the active dot based on the percentage of scroll
+            const resizeObserver = new ResizeObserver(() => {
+                updateDots();
             });
-        });
-
+            resizeObserver.observe(servicesContainer);
+            
+            servicesContainer.addEventListener('scroll', () => {
+                const dots = dotsContainer.querySelectorAll('.dot');
+                if (dots.length === 0) return;
+            
+                const maxScroll = servicesContainer.scrollWidth - servicesContainer.offsetWidth;
+                if (maxScroll <= 0) return;
+                
+                const scrollPercentage = servicesContainer.scrollLeft / maxScroll;
+                const activeIndex = Math.min(
+                    dots.length - 1,
+                    Math.floor(scrollPercentage * dots.length + 0.5)
+                );
+            
+                dots.forEach((dot, i) => {
+                    dot.classList.toggle('active', i === activeIndex);
+                });
+            });
+        }
     } catch (error) {
         console.error("Critical Load Error:", error);
         titleElements.forEach(el => el.textContent = "Error Loading Content");
