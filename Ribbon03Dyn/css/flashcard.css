@@ -132,7 +132,7 @@
 
     /* Force text wrapping */
     word-wrap: break-word;
-    white-space: normal; 
+    white-space: normal;
     overflow-wrap: break-word;
 }
 
@@ -146,8 +146,8 @@
     margin-top: 0 !important;
     font-weight: bold;
 
-     /* Hanging indentation space */
-    padding-left: 2.6rem !important; /* Space for the bullet */
+    /* Hanging indentation space */
+    padding-left: 2.55rem !important; /* Space for the bullet */
     text-indent: -2.6rem !important; /* Pull first line back */
 }
 .card-list {

@@ -56,21 +56,27 @@
     }
     
     /* 5. Indentation Overrides for 220px */
-    .card-goal {
-        padding-left: 2.2rem !important;
-        text-indent: -2.2rem !important;
-        font-size: 0.75rem;
+    #dynamic-flashcard-container .accordion-header {
+        padding-left: 2.6rem;   /* Space for the bullet */
+        text-indent: -1.2rem;   /* Pull first line back */
     }
     #dynamic-flashcard-container .accordion-content li {
         font-size: 0.65rem;
         margin-bottom: 1px;
         line-height: 1.2;
+        padding-left: 0.6rem;
+        text-indent: -0.62rem;
+    }
+    .card-goal {
+        padding-left: 1.8rem !important;
+        text-indent: -1.85rem !important;
+        font-size: 0.75rem;
     }
     .card-impact {
         font-size: 0.7rem;
         padding: 0.6rem !important;
-        padding-left: 1.8rem !important;
-        text-indent: -1.2rem !important;
+        padding-left: 2.0rem !important;
+        text-indent: -1.0rem !important;
     }
 
     /* 6. Footer Transition */
