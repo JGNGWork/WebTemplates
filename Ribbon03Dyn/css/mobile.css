@@ -40,7 +40,7 @@
         padding: 3rem 1.25rem 5rem 1.25rem; 
         background-color: transparent !important;
     }
-
+    .body-section .container { width: 99%; }
     /* 4. Flashcards */
     #dynamic-flashcard-container {
         padding: 1rem 0.6rem;
