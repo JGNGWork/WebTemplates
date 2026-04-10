@@ -47,8 +47,8 @@
         gap: 1rem;
     }
     #dynamic-flashcard-container .accordion-item { 
-        flex: 0 0 220px;
-        min-height: 240px;
+        flex: 0 0 18rem;
+        min-height: 15rem;
     }
     #dynamic-flashcard-container .accordion-header {
         font-size: 0.75rem;
@@ -57,8 +57,8 @@
     
     /* 5. Indentation Overrides for 220px */
     #dynamic-flashcard-container .accordion-header {
-        padding-left: 2.6rem;   /* Space for the bullet */
-        text-indent: -1.2rem;   /* Pull first line back */
+        padding-left: 1.6rem;   /* Space for the bullet */
+        text-indent: -1.25rem;   /* Pull first line back */
     }
     #dynamic-flashcard-container .accordion-content li {
         font-size: 0.65rem;

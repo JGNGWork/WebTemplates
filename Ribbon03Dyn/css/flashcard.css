@@ -55,7 +55,7 @@
 
 /* Individual Card Styling */
 #dynamic-flashcard-container .accordion-item {
-    flex: 0 0 20rem; /* 320px */ /* Desktop Width */
+    flex: 0 0 26rem; /* Desktop Width */
     margin-bottom: 0;
     background: var(--card-bg);
     border-radius: 1rem; /* 15px */
