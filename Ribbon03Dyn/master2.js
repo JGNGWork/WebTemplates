@@ -14,7 +14,7 @@ async function initWebsite() {
     // Configuration paths
     const themeName = urlParams.get('theme') || 'default';
     const files = {
-        header: 'content/header.json',
+        header: 'content/header2.json',
         body: 'content/body.json',
         contact: 'content/contact.json',
         theme: `themes/${themeName}.json`
