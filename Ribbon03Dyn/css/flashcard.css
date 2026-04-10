@@ -147,8 +147,8 @@
     font-weight: bold;
 
     /* Hanging indentation space */
-    padding-left: 2.55rem !important; /* Space for the bullet */
-    text-indent: -2.5rem !important; /* Pull first line back */
+    padding-left: 2.5rem !important; /* Space for the bullet */
+    text-indent: -2.45rem !important; /* Pull first line back */
 }
 .card-list {
     display: flex;
