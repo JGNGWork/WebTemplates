@@ -36,11 +36,11 @@
 
     .body-section { 
         margin-top: -40px; /* Adjusted for mobile wave height */
-        /* Converted padding to rem (~48px 20px 80px 20px) */
-        padding: 3rem 1.25rem 5rem 1.25rem; 
+        /* Converted padding to rem (~48px 8px 80px 8px) */
+        padding: 3rem 0.5rem 5rem 0.5rem; 
         background-color: transparent !important;
     }
-    .body-section .container { width: 100%; }
+    .body-section .container { width: 99%; }
     /* 4. Flashcards */
     #dynamic-flashcard-container {
         padding: 1rem 0.6rem;
