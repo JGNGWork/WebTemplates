@@ -109,11 +109,13 @@ async function initWebsite() {
                 logoContainer.innerHTML = `<img src="${logoPath}" alt="${companyName}" class="company-logo">`;
             } else {
                 // Show Text Fallback
+                //logoContainer.innerHTML = `<h1 id="company-title">Loading...</h1>`;
                 logoContainer.innerHTML = `<h1 id="company-title">${companyName}</h1>`;
             }
         } else {
             // Fallback for current titleElements if logo-container doesn't exist
             // Update all elements with id="company-title" (like <h1> or <h2>)
+            
             titleElements.forEach(el => el.textContent = companyName);
         }
         

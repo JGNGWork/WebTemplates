@@ -4,27 +4,21 @@
 @media (max-width: 600px) {
     /* 1. Header & Title & Logo */
     .top-section { 
-        height: 25vh; 
+        height: auto; 
         min-height: 18vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        flex-direction: column !important;
         padding-top: 0;
-        margin: 0;
+        gap: 1rem
     }
     .top-section h1 { 
         font-size: 4rem; 
         padding: 0 1rem 1rem 1rem;
-        margin: 0;
+        margin: 1rem 6rem;
         text-align: center;
     }
-    .company-logo {
-        max-height: 45px;
-        margin: 4rem;
-    }
+    #logo-container,
     .top-section  #logo-container {
-        margin: 4rem;
+        margin: 0 !important;
         padding: 0 1rem 1rem 1rem;
         align-items: center;
     }
@@ -35,7 +29,7 @@
         margin-bottom: 1.5rem; /* 20px; */
     }
     .top-section  .cta-container {
-        margin: 0;
+        margin: 0 !important;
         align-items: center;
     }
 
@@ -46,7 +40,7 @@
     .body-section { 
         margin-top: -40px; /* Adjusted for mobile wave height */
         /* Converted padding to rem (~48px 8px 80px 8px) */
-        padding: 3rem 0.5rem 5rem 0.5rem; 
+        padding: 6rem 0.5rem 5rem 0.5rem; 
         background-color: transparent !important;
     }
     .body-section .container { width: 99%; }
@@ -94,5 +88,36 @@
         align-items: center;    
         text-align: center;     
         gap: 30px;              
+    }
+}
+
+@media (max-width: 700px) { /*  */
+    .top-section { 
+        height: auto; 
+        min-height: 18vh;
+        flex-direction: column !important;
+        padding-top: 0;
+        gap: 1rem
+    }
+    .top-section h1 { 
+        padding: 0 1rem;
+        margin: 1rem 6rem 0;
+        text-align: center;
+    }
+    #logo-container,
+    .top-section  #logo-container {
+        margin: 0 !important;
+        padding: 0 1rem 1rem 1rem;
+        align-items: center;
+    }
+    
+    /* 2. Strategy Button (CTA) */
+    .cta-container {
+        margin-top: 1rem; /* 15px; */
+        margin-bottom: 1.5rem; /* 20px; */
+    }
+    .top-section  .cta-container {
+        margin: 0 auto !important;
+        align-items: center;
     }
 }

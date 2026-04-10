@@ -1,0 +1,29 @@
+
+
+#logo-container {
+    display: flex;
+    margin: 0;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    min-height: 80px;
+    max-width: 100%;
+}
+ 
+.company-logo {
+    max-height: 140px; /* Adjust based on your header height */
+    max-width: 90vw;
+    width: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 6rem;
+}
+
+
+.top-section #logo-container, 
+.cta-container {
+    
+    display: flex;
+    justify-content: center;
+    min-width: 280px;
+}
